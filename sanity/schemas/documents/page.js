@@ -37,6 +37,12 @@ export default {
       type: `customSlug`,
       group: 'data',
     },
+    {
+      name: `image`,
+      title: `Image`,
+      type: `customImage`,
+      group: 'data',
+    },
     // {
     //   name: `sections`,
     //   title: `Sections`,

@@ -1,15 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Layout from '../components/Common/Layout';
 import SanitySection from '../components/Common/SanitySection';
+import Image from '../components/Common/Image';
 
 const Page = (props) => {
   const { location, data: staticData } = props;
   const { sanityPage } = staticData;
-  const { title } = sanityPage;
+  const { title, image } = sanityPage;
 
   return (
-    <div>
+    <Layout>
       <p>{`Hello from the ${title} page document!`}</p>
+      <Image imageData={image} />
       {/* {pageSections?.length > 0 &&
         pageSections?.map((section) => {
           if (!section) return null;
@@ -30,7 +33,7 @@ const Page = (props) => {
             />
           );
         })} */}
-    </div>
+    </Layout>
   );
 };
 
@@ -60,6 +63,9 @@ export const query = graphql`
       title
       slug {
         current
+      }
+      image {
+        ...ImageFragment
       }
     }
   }

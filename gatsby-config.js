@@ -33,7 +33,8 @@ module.exports = {
         projectId: process.env.GATSBY_SANITY_STUDIO_PROJECT_ID,
         dataset: process.env.GATSBY_SANITY_STUDIO_PROJECT_DATASET,
         token: process.env.GATSBY_SANITY_STUDIO_READ_TOKEN,
-        graphqlTag: 'default',
+        watchMode: true,
+        overlayDrafts: true,
       },
     },
     {

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Sections from '~sections';
+import * as Sections from '../../../sections';
 
 const SanitySection = (props) => {
   const { data } = props;
@@ -21,7 +21,7 @@ const SanitySection = (props) => {
 
   // Handle missing exported SanitySection
   if (!CustomSection) {
-    console.error(`Can't find SanitySection ${sectionName}, are you sure it exists in the slices directory?`);
+    console.error(`Can't find SanitySection ${sectionName}, are you sure it exists in /src/sections/index.js?`);
   }
 
   // Return SanitySection

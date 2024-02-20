@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Footer, Header, NoJs, WmAscii } from '~components';
+// import { Footer, Header } from '~components';
 import './styles.scss';
 
 const Layout = (props) => {
