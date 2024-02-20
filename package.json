@@ -3,38 +3,57 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Alannah Frankel",
   "dependencies": {
-    "gatsby": "^5.13.2",
+    "@sanity/client": "^6.12.4",
+    "classnames": "^2.3.2",
+    "gatsby": "^5.13.3",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-root-import": "^2.0.9",
+    "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-source-sanity": "^7.9.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/preset-react": "^7.23.3",
+    "babel-plugin-root-import": "6.6.0",
+    "babel-preset-gatsby": "3.4.0",
+    "dotenv": "16.0.3",
+    "eslint": "8.32.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "json-loader": "^0.5.7",
+    "prettier": "2.8.3"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "dev": "gatsby clean && gatsby develop -o",
+    "dev:host": "gatsby develop --host=0.0.0.0",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "serve": "gatsby serve",
+    "format": "prettier \"**/*.md \" --write"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
+  "repository": "https://github.com/gatsbyjs/gatsby-starter-default",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "main": "index.js"
 }

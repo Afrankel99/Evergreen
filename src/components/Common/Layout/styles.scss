@@ -1,0 +1,13 @@
+body {
+    background: white;
+    color: black;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+
+    .button {
+        margin: 10px 10px 0 0 !important;
+    }
+}
