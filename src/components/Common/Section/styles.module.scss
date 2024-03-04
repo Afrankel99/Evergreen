@@ -1,0 +1,78 @@
+:root {
+  --none-spacing: 0px;
+  --xs-spacing: 24px;
+  --s-spacing: 48px;
+  --m-spacing: 80px;
+  --l-spacing: 96px;
+  --xl-spacing: 112px;
+
+  @include media-down(tablet) {
+    --none-spacing: 0px;
+    --xs-spacing: 24px;
+    --s-spacing: 32px;
+    --m-spacing: 48px;
+    --l-spacing: 64px;
+    --xl-spacing: 80px;
+  }
+}
+
+$noneSpacing: var(--none-spacing);
+$xsSpacing: var(--xs-spacing);
+$sSpacing: var(--s-spacing);
+$mSpacing: var(--m-spacing);
+$lSpacing: var(--l-spacing);
+$xlSpacing: var(--xl-spacing);
+
+.section {
+  position: relative;
+  background-color: var(--bkg-default);
+
+  &.blogPost {
+    padding: 0;
+  }
+
+  &.noneSpacing {
+    padding: $noneSpacing 24px;
+  }
+
+  &.xsSpacing {
+    padding: $xsSpacing 24px;
+  }
+
+  &.sSpacing {
+    padding: $sSpacing 24px;
+  }
+
+  &.mSpacing {
+    padding: $mSpacing 24px;
+  }
+
+  &.lSpacing {
+    padding: $lSpacing 24px;
+  }
+
+  &.xlSpacing {
+    padding: $xlSpacing 24px;
+  }
+
+  &.removeTopSpacing {
+    padding-top: 0px !important;
+  }
+
+  &.removeBottomSpacing {
+    padding-bottom: 0px !important;
+  }
+}
+
+.sectionBg {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  object-fit: cover !important;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
