@@ -2,12 +2,13 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Common/Layout';
 import SanitySection from '../components/Common/SanitySection';
+import Section from '../components/Common/Section';
 import Image from '../components/Common/Image';
 
 const Page = (props) => {
   const { location, data: staticData } = props;
   const { sanityPage } = staticData;
-  const { title, image } = sanityPage;
+  const { sections: pageSections = [], title, image } = sanityPage;
 
   return (
     <Layout>
@@ -18,20 +19,13 @@ const Page = (props) => {
           if (!section) return null;
           if (!section._key) {
             return (
+              // eslint-disable-next-line react/jsx-key
               <Section>
                 Missing `_key` on GraphQL fragment in `src/templates/Page` for section: {section.__typename}
               </Section>
             );
           }
-          return (
-            <SanitySection
-              data={section}
-              key={section._key}
-              pageTitle={pageTitle}
-              pageBreadcrumbs={pageBreadcrumbs}
-              location={location}
-            />
-          );
+          return <SanitySection data={section} key={section._key} location={location} />;
         })}
     </Layout>
   );
@@ -68,12 +62,8 @@ export const query = graphql`
         ...ImageFragment
       }
       sections {
-        twoColumnSection {
-          title
-          addButton
-          theme
-        }
-
+        __typename # __typename used above for debugging
+        ...TwoColumnSectionFragment
       }
     }
   }
