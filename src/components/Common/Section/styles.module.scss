@@ -6,14 +6,14 @@
   --l-spacing: 96px;
   --xl-spacing: 112px;
 
-  @include media-down(tablet) {
-    --none-spacing: 0px;
-    --xs-spacing: 24px;
-    --s-spacing: 32px;
-    --m-spacing: 48px;
-    --l-spacing: 64px;
-    --xl-spacing: 80px;
-  }
+  // @include media-down(tablet) {
+  //   --none-spacing: 0px;
+  //   --xs-spacing: 24px;
+  //   --s-spacing: 32px;
+  //   --m-spacing: 48px;
+  //   --l-spacing: 64px;
+  //   --xl-spacing: 80px;
+  // }
 }
 
 $noneSpacing: var(--none-spacing);

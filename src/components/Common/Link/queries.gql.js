@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 
 export const LinkFragment = graphql`
-  fragment LinkFragment on SanityCtaLink {
+  fragment LinkFragment on SanityLink {
     # action
     email
     linkType

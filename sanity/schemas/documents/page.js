@@ -48,9 +48,7 @@ export default {
       name: `sections`,
       title: `Sections`,
       type: `array`,
-      of: [
-        {type: "twoColumnSection"},
-      ],
+      of: [{ type: 'twoColumnSection' }],
       group: 'data',
     },
     // {

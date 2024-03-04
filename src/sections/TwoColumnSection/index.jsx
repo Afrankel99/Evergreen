@@ -7,8 +7,9 @@ import * as styles from './styles.module.scss';
 
 const TwoColumnSection = (props) => {
 console.log(props)
+const { data } = props;
   
-    return null
+    return <h1>{data.title}</h1>
   };
   
   export default TwoColumnSection;

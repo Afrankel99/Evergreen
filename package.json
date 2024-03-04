@@ -26,7 +26,7 @@
     "babel-plugin-root-import": "6.6.0",
     "babel-preset-gatsby": "3.4.0",
     "dotenv": "16.0.3",
-    "eslint": "8.32.0",
+    "eslint": "^8.32.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-alias": "1.1.2",
@@ -51,9 +51,13 @@
     "serve": "gatsby serve",
     "format": "prettier \"**/*.md \" --write"
   },
-  "repository": "https://github.com/gatsbyjs/gatsby-starter-default",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-default.git"
+  },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-default#readme"
 }
