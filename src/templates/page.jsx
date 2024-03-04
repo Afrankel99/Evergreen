@@ -13,7 +13,7 @@ const Page = (props) => {
     <Layout>
       <p>{`Hello from the ${title} page document!`}</p>
       <Image imageData={image} />
-      {/* {pageSections?.length > 0 &&
+      {pageSections?.length > 0 &&
         pageSections?.map((section) => {
           if (!section) return null;
           if (!section._key) {
@@ -32,7 +32,7 @@ const Page = (props) => {
               location={location}
             />
           );
-        })} */}
+        })}
     </Layout>
   );
 };
@@ -66,6 +66,14 @@ export const query = graphql`
       }
       image {
         ...ImageFragment
+      }
+      sections {
+        twoColumnSection {
+          title
+          addButton
+          theme
+        }
+
       }
     }
   }

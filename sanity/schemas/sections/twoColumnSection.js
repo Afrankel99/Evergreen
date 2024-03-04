@@ -2,17 +2,11 @@ import defaultSectionGroups from '../common/defaultSectionGroups';
 
 export default {
   name: 'twoColumnSection',
-  title: 'Two Col (Default)',
+  title: 'Two Column',
   type: 'object',
   groups: defaultSectionGroups,
   //   icon: LuColumns,
   fields: [
-    {
-      name: `tagline`,
-      title: `Tagline`,
-      type: `string`,
-      group: 'data',
-    },
     {
       name: `title`,
       title: `Title`,
@@ -22,7 +16,6 @@ export default {
     {
       name: `content`,
       title: `Content`,
-      description: `Please ensure that the content is no longer than 650 characters.`,
       type: 'text',
       group: 'data',
     },
@@ -35,7 +28,7 @@ export default {
     {
       name: `button`,
       title: `Button`,
-      type: `ctaButton`,
+      type: `button`,
       group: 'data',
       hidden: ({ parent }) => !parent?.addButton,
     },
@@ -53,7 +46,6 @@ export default {
         list: [
           { value: 'white', title: 'White' },
           { value: 'black', title: 'Black' },
-          { value: 'cork', title: 'Cork' },
         ],
         layout: 'radio',
         direction: 'horizontal',
@@ -61,12 +53,12 @@ export default {
       initialValue: 'white',
       group: 'styles',
     },
-    {
-      name: 'alignMedia',
-      title: 'Align Media',
-      type: 'alignMedia',
-      group: 'styles',
-    },
+    // {
+    //   name: 'alignMedia',
+    //   title: 'Align Media',
+    //   type: 'alignMedia',
+    //   group: 'styles',
+    // },
     // {
     //   name: 'sectionCommonFields',
     //   title: 'Section Styles',
@@ -76,13 +68,11 @@ export default {
   ],
   preview: {
     select: {
-      internalLabel: 'internalLabel',
       title: 'title',
     },
     prepare(selection) {
       return {
-        title: `Two Column (Default)`,
-        subtitle: selection?.internalLabel,
+        title: `Two Column`,
       };
     },
   },

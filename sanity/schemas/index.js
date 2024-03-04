@@ -2,6 +2,7 @@
 import page from './documents/page';
 
 // sections
+import twoColumnSection from './sections/twoColumnSection'; 
 
 // objects
 import button from './objects/button';
@@ -14,6 +15,7 @@ export const schemaTypes = [
   page,
 
   // sections
+  twoColumnSection,
 
   // objects
   button,

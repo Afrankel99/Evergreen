@@ -1,5 +1,5 @@
 export default {
-  name: 'ctaButton',
+  name: 'button',
   title: 'Button',
   type: 'object',
   fields: [
