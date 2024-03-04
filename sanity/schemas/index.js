@@ -4,6 +4,7 @@ import page from './documents/page';
 // sections
 
 // objects
+import button from './objects/button';
 import customSlug from './objects/customSlug';
 import customImage from './objects/customImage';
 
@@ -14,6 +15,7 @@ export const schemaTypes = [
   // sections
 
   // objects
+  button,
   customImage,
   customSlug,
 ];

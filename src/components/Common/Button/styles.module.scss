@@ -1,0 +1,39 @@
+.button {
+  position: relative;
+  @include textMd;
+  font-weight: $font-weight-medium;
+  border-radius: 80px;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 0.4s var(--ease-in-out-cubic), 
+              color 0.4s var(--ease-in-out-cubic), 
+              width 0.4s var(--ease-in-out-cubic);
+  border: 1px solid var(--button-border);
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  cursor: pointer;
+  .arrow {
+    margin-left: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    fill: var(--button-color);
+    transition: fill 0.4s var(--ease-in-out-cubic), 
+                width 0.4s var(--ease-in-out-cubic), 
+                margin-left 0.4s var(--ease-in-out-cubic);
+  }
+  &:hover {
+    border: 1px solid var(--button-border-hover);
+    background-color: var(--button-bg-hover);
+    color: var(--button-color-hover);
+    .arrow {
+      margin-left: 12px;
+      width: 14px;
+      height: 14px;
+      opacity: 1;
+      fill: var(--button-color-hover);
+    }
+  }
+}
