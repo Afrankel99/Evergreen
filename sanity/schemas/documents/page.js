@@ -1,5 +1,4 @@
 import { FaSistrix, FaDatabase, FaRegWindowMaximize } from 'react-icons/fa';
-import twoColumnSection from '../sections/twoColumnSection';
 
 export default {
   name: `page`,
@@ -48,7 +47,7 @@ export default {
       name: `sections`,
       title: `Sections`,
       type: `array`,
-      of: [{ type: 'twoColumnSection' }],
+      of: [{ type: 'twoColumnSection' }, { type: 'twoPictureSection' }],
       group: 'data',
     },
     // {
