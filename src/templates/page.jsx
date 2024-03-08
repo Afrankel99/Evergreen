@@ -65,6 +65,7 @@ export const query = graphql`
         __typename # __typename used above for debugging
         ...TwoColumnSectionFragment
         ...TwoPictureSectionFragment
+        ...ThreePictureSectionFragment
       }
     }
   }
