@@ -9,7 +9,17 @@ const ThreePictureSection = (props) => {
   console.log('ThreePictureSection', props);
   const { data } = props;
 
-  return <h1>{data.title}</h1>;
+  return (
+    <Section>
+      <div className= {styles.contentContainer}>
+        <h1 className={styles.title}>{data.title}</h1>
+        <p>{content}</p>
+        <Image imageData={image}></Image>
+        <Image imageData={image}></Image>
+        <Image imageData={image}></Image>
+      </div>
+    </Section>
+  );
 };
 
 export default ThreePictureSection;

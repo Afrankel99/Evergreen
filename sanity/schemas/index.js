@@ -6,6 +6,7 @@ import settings from './documents/settings';
 import twoColumnSection from './sections/twoColumnSection';
 import twoPictureSection from './sections/twoPictureSection';
 import threePictureSection from './sections/threePictureSection';
+import bannerSection from './sections/bannerSection';
 
 // objects
 import button from './objects/button';
@@ -24,6 +25,7 @@ export const schemaTypes = [
   twoColumnSection,
   twoPictureSection,
   threePictureSection,
+  bannerSection,
 
   // objects
   button,
