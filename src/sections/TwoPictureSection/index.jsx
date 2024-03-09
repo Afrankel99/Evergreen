@@ -9,7 +9,17 @@ const TwoPictureSection = (props) => {
   console.log("TwoPictureSection", props);
   const { data } = props;
 
-  return <h1>{data.title}</h1>;
+  return (
+    <Section>
+      <div className= {styles.contentContainer}>
+        <h1 className={styles.title}>{data.title}</h1>
+        <p>{content}</p>
+        <Button className={styles.button} title={button.title} to={button.link} />
+        <Image imageData={image}></Image>
+        <Image imageData={image}></Image>
+      </div>
+    </Section>
+  );
 };
 
 export default TwoPictureSection;

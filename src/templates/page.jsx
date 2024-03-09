@@ -66,6 +66,7 @@ export const query = graphql`
         ...TwoColumnSectionFragment
         ...TwoPictureSectionFragment
         ...ThreePictureSectionFragment
+        ...BannerSectionFragment
       }
     }
   }

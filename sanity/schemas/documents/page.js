@@ -47,7 +47,7 @@ export default {
       name: `sections`,
       title: `Sections`,
       type: `array`,
-      of: [{ type: 'twoColumnSection' }, { type: 'twoPictureSection' }, { type: 'threePictureSection' }],
+      of: [{ type: 'twoColumnSection' }, { type: 'twoPictureSection' }, { type: 'threePictureSection' }, { type: 'bannerSection' }],
       group: 'data',
     },
     // {
