@@ -9,10 +9,10 @@ import * as styles from './styles.module.scss';
 
 const TwoColumnSection = (props) => {
   const { data } = props;
-  const { title, content, button, image, addButton } = data;
-
+  const { title, content, button, image, addButton, spacingOptions } = data;
+  console.log('spacingOptions', spacingOptions);
   return (
-    <Section>
+    <Section {...spacingOptions}>
       <div className={styles.container}>
         <div className={styles.leftColumn}>
           <h1 className={styles.title}>{data.title}</h1>
@@ -25,12 +25,8 @@ const TwoColumnSection = (props) => {
           </div>
         </div>
       </div>
-
-
-
     </Section>
   );
-
 };
 
 export default TwoColumnSection;

@@ -14,5 +14,9 @@ export const TwoColumnSectionFragment = graphql`
       ...ImageFragment
     }
     theme
+    spacingOptions {
+      sectionSpacing
+      spacingOverride
+    }
   }
 `;

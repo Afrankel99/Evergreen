@@ -58,12 +58,12 @@ export default {
     //   type: 'alignMedia',
     //   group: 'styles',
     // },
-    // {
-    //   name: 'sectionCommonFields',
-    //   title: 'Section Styles',
-    //   type: 'sectionCommonFields',
-    //   group: 'styles',
-    // },
+    {
+      name: 'spacingOptions',
+      title: 'Spacing Options',
+      type: 'spacingOptions',
+      group: 'styles',
+    },
   ],
   preview: {
     select: {

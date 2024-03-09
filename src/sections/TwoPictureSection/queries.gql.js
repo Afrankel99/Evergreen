@@ -17,5 +17,9 @@ export const TwoPictureSectionFragment = graphql`
       ...ImageFragment
     }
     theme
+    spacingOptions {
+      sectionSpacing
+      spacingOverride
+    }
   }
 `;

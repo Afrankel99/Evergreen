@@ -13,6 +13,7 @@ import navbar from './objects/navbar';
 import customSlug from './objects/customSlug';
 import customImage from './objects/customImage';
 import link from './objects/link';
+import spacingOptions from './objects/spacingOptions';
 
 export const schemaTypes = [
   // documents
@@ -29,5 +30,6 @@ export const schemaTypes = [
   navbar,
   customImage,
   customSlug,
+  spacingOptions,
   link,
 ];

@@ -7,8 +7,18 @@ import * as styles from './styles.module.scss';
 const isDev = process.env.NODE_ENV === 'development';
 
 const Section = (props) => {
-  const { as, className, containerClassName, children, sectionName, noContainer, bgImage, sectionSpacing, ...rest } =
-    props;
+  const {
+    as,
+    className,
+    containerClassName,
+    children,
+    sectionName,
+    noContainer,
+    bgImage,
+    sectionSpacing,
+    spacingOverride,
+    ...rest
+  } = props;
 
   const HtmlElement = as || 'section';
 
@@ -21,7 +31,12 @@ const Section = (props) => {
     xl: styles.xlSpacing,
   };
 
-  const sectionClasses = classNames(styles.section, spacingClassNames[sectionSpacing], className || '');
+  const sectionClasses = classNames(
+    styles.section,
+    spacingClassNames[sectionSpacing],
+    spacingOverride !== 'none' && styles[spacingOverride],
+    className || ''
+  );
 
   return (
     <HtmlElement className={sectionClasses} data-slice={isDev ? sectionName : null} {...rest}>
