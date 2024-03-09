@@ -7,7 +7,6 @@ export default {
       name: `image`,
       title: `Image`,
       type: `customImage`,
-      group: 'data',
     },
     {
       name: 'navItems',
@@ -20,13 +19,11 @@ export default {
       name: `addButton`,
       title: `Add Button`,
       type: `boolean`,
-      group: 'data',
     },
     {
       name: `button`,
       title: `Button`,
       type: `button`,
-      group: 'data',
       hidden: ({ parent }) => !parent?.addButton,
     },
   ],
