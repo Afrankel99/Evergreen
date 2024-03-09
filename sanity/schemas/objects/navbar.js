@@ -3,12 +3,12 @@ export default {
   title: 'Navbar',
   type: 'object',
   fields: [
-    // {
-    //   name: 'navItems',
-    //   title: 'Nav Items',
-    //   type: 'array',
-    //   of: [{ type: 'navLinks' }],
-    // },
+    {
+      name: 'navItems',
+      title: 'Nav Items',
+      type: 'array',
+      of: [{ type: 'link' }],
+    },
   ],
   preview: {
     prepare() {

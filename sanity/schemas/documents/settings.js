@@ -6,12 +6,12 @@ export default {
   type: `document`,
   groups: settingsSectionGroups,
   fields: [
-    // {
-    //   name: 'navbar',
-    //   title: 'Navbar',
-    //   type: 'navbar',
-    //   group: 'navbar',
-    // },
+    {
+      name: 'navbar',
+      title: 'Navbar',
+      type: 'navbar',
+      group: 'navbar',
+    },
     // {
     //   name: `footer`,
     //   title: `Footer`,
