@@ -12,7 +12,7 @@ export default {
       name: 'navItems',
       title: 'Nav Items',
       type: 'array',
-      of: [{ type: 'link' }],
+      of: [{ type: 'button' }],
       // add in max 4 items later
     },
     {
