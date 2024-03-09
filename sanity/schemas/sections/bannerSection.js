@@ -38,12 +38,6 @@ export default {
     //   type: 'alignMedia',
     //   group: 'styles',
     // },
-    // {
-    //   name: 'sectionCommonFields',
-    //   title: 'Section Styles',
-    //   type: 'sectionCommonFields',
-    //   group: 'styles',
-    // },
   ],
   preview: {
     select: {
