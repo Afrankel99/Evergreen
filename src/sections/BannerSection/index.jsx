@@ -9,14 +9,17 @@ import * as styles from './styles.module.scss';
 
 const BannerSection = (props) => {
   const { data } = props;
-  const { title, content, button, image, addButton } = data;
+  const { title, content, button, image, addButton, spacingOptions } = data;
 
   return (
-    <Section>
+    <Section className={styles.section} {...spacingOptions}>
       <div className={styles.contentContainer}>
-        {title && <h1 className={styles.title}>{title}</h1>}
-        {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
-        <Image imageData={image}></Image>
+        <div className={styles.textContainer}>
+          {title && <h1 className={styles.title}>{title}</h1>}
+          {content && <p className={styles.title}>{content}</p>}
+          {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
+        </div>
+        <div className={styles.imageWrapper}>{/* <Image imageData={image}></Image> */}</div>
       </div>
     </Section>
   );

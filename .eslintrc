@@ -29,6 +29,9 @@
       "version": "detect"
     },
     "import/resolver": {
+        "alias": [
+            ["~sass", "./src/utils/sass"]
+          ],
       "node": {
         "paths": [
           "schemas"

@@ -40,8 +40,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
+        additionalData: '@import "resources.scss";',
         sassOptions: {
-          includePaths: ['src'],
+          includePaths: ['src/utils/sass/base'],
         },
       },
     },

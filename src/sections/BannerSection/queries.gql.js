@@ -12,5 +12,9 @@ export const BannerSectionFragment = graphql`
     image {
       ...ImageFragment
     }
+    spacingOptions {
+      sectionSpacing
+      spacingOverride
+    }
   }
 `;

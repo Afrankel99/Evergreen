@@ -3,17 +3,14 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Common/Layout';
 import SanitySection from '../components/Common/SanitySection';
 import Section from '../components/Common/Section';
-import Image from '../components/Common/Image';
 
 const Page = (props) => {
   const { location, data: staticData } = props;
-  const { sanityPage } = staticData;
-  const { sections: pageSections = [], title, image } = sanityPage;
+  const { sanityPage, settings } = staticData;
+  const { sections: pageSections = [] } = sanityPage;
 
   return (
-    <Layout>
-      <p>{`Hello from the ${title} page document!`}</p>
-      <Image imageData={image} />
+    <Layout location={location} settings={settings}>
       {pageSections?.length > 0 &&
         pageSections?.map((section) => {
           if (!section) return null;
@@ -68,6 +65,10 @@ export const query = graphql`
         ...ThreePictureSectionFragment
         ...BannerSectionFragment
       }
+    }
+    settings: sanitySettings {
+      ...NavbarFragment
+      #   ...FooterFragment
     }
   }
 `;

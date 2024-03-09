@@ -32,6 +32,12 @@ export default {
       type: `customImage`,
       group: 'data',
     },
+    {
+      name: 'spacingOptions',
+      title: 'Spacing Options',
+      type: 'spacingOptions',
+      group: 'styles',
+    },
     // {
     //   name: 'alignMedia',
     //   title: 'Align Media',
