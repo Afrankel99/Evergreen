@@ -1,12 +1,11 @@
 import { graphql } from 'gatsby';
 
-export const TwoPictureSectionFragment = graphql`
-  fragment TwoPictureSectionFragment on SanityTwoPictureSection {
+export const ThreePictureSectionFragment = graphql`
+  fragment ThreePictureSectionFragment on SanityThreePictureSection {
     _key
     _type
     title
     content
-    }
     imageOne {
       ...ImageFragment
     }
