@@ -10,12 +10,12 @@ import * as styles from './styles.module.scss';
 const TwoColumnSection = (props) => {
   const { data } = props;
   const { title, content, button, image, addButton, spacingOptions } = data;
-  console.log('spacingOptions', spacingOptions);
+
   return (
     <Section {...spacingOptions}>
       <div className={styles.container}>
         <div className={styles.leftColumn}>
-          <h1 className={styles.title}>{data.title}</h1>
+          <h1 className={styles.title}>{title}</h1>
           <p>{content}</p>
           <Button className={styles.button} title={button.title} to={button.link} />
         </div>

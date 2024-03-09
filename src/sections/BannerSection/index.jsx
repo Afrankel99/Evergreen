@@ -12,15 +12,14 @@ const BannerSection = (props) => {
   const { title, content, button, image, addButton } = data;
 
   return (
-   <Section>
-    <div className={styles.contentContainer}>
-      <h1 className={styles.title}>{data.title}</h1>
-      <Button className={styles.button} title={button.title} to={button.link} />
-      <Image imageData={image}></Image>
-    </div>
-   </Section> 
+    <Section>
+      <div className={styles.contentContainer}>
+        {title && <h1 className={styles.title}>{title}</h1>}
+        {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
+        <Image imageData={image}></Image>
+      </div>
+    </Section>
   );
-
 };
 
 export default BannerSection;
