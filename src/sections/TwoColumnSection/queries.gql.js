@@ -14,6 +14,7 @@ export const TwoColumnSectionFragment = graphql`
       ...ImageFragment
     }
     theme
+    alignMedia
     spacingOptions {
       sectionSpacing
       spacingOverride

@@ -9,6 +9,7 @@ import threePictureSection from './sections/threePictureSection';
 import bannerSection from './sections/bannerSection';
 
 // objects
+import alignMedia from './objects/alignMedia';
 import button from './objects/button';
 import navbar from './objects/navbar';
 import customSlug from './objects/customSlug';
@@ -28,6 +29,7 @@ export const schemaTypes = [
   bannerSection,
 
   // objects
+  alignMedia,
   button,
   navbar,
   customImage,

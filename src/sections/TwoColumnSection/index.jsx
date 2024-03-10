@@ -1,28 +1,25 @@
 import React from 'react';
 import classNames from 'classnames';
-import handleLink from '~components/Common/Link/handleLink';
-import Link from '~components/Common/Link';
 import Section from '~components/Common/Section';
 import Image from '~components/Common/Image';
 import Button from '~components/Common/Button';
+
 import * as styles from './styles.module.scss';
 
 const TwoColumnSection = (props) => {
   const { data } = props;
-  const { title, content, button, image, addButton, spacingOptions } = data;
+  const { title, content, button, image, addButton, alignMedia, spacingOptions } = data;
 
   return (
-    <Section {...spacingOptions}>
-      <div className={styles.container}>
-        <div className={styles.leftColumn}>
-          <h1 className={styles.title}>{title}</h1>
-          <p>{content}</p>
-          <Button className={styles.button} title={button.title} to={button.link} />
+    <Section className={styles.section} sectionName="TwoColumnSection" {...spacingOptions}>
+      <div className={classNames(styles.contentContainer, styles[alignMedia])}>
+        <div className={styles.textContainer}>
+          {title && <h1 className={styles.title}>{title}</h1>}
+          {content && <p className={styles.body}>{content}</p>}
+          {addButton && <Button className={styles.button} title={button.title} to={button.link} />}
         </div>
-        <div className={styles.rightColumn}>
-          <div className={styles.image}>
-            <Image imageData={image}></Image>
-          </div>
+        <div className={styles.imageContainer}>
+          <Image imageData={image}></Image>
         </div>
       </div>
     </Section>
