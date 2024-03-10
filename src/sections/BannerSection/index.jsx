@@ -12,7 +12,7 @@ const BannerSection = (props) => {
   const { title, content, button, image, addButton, spacingOptions } = data;
 
   return (
-    <Section className={styles.section} {...spacingOptions}>
+    <Section className={styles.section} sectionName="BannerSection" {...spacingOptions}>
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           {title && <h1 className={styles.title}>{title}</h1>}

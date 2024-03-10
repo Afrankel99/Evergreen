@@ -26,28 +26,21 @@ export default {
       group: 'data',
     },
     {
-      name: `subtitle`,
-      title: `Subtitle`,
-      type: `string`,
-      group: 'data',
-    },
-    {
       name: `slug`,
       title: `Slug`,
       type: `customSlug`,
       group: 'data',
     },
     {
-      name: `image`,
-      title: `Image`,
-      type: `customImage`,
-      group: 'data',
-    },
-    {
       name: `sections`,
       title: `Sections`,
       type: `array`,
-      of: [{ type: 'twoColumnSection' }, { type: 'twoPictureSection' }, { type: 'threePictureSection' }, { type: 'bannerSection' }],
+      of: [
+        { type: 'twoColumnSection' },
+        { type: 'twoPictureSection' },
+        { type: 'threePictureSection' },
+        { type: 'bannerSection' },
+      ],
       group: 'data',
     },
     // {

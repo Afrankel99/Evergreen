@@ -13,7 +13,7 @@ const ThreePictureSection = (props) => {
   const { title, content, imageOne, imageTwo, imageThree, spacingOptions } = data;
 
   return (
-    <Section {...spacingOptions}>
+    <Section className={styles.section} sectionName="ThreePictureSection" {...spacingOptions}>
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>{title}</h1>
         <p>{content}</p>

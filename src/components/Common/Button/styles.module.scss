@@ -1,23 +1,32 @@
 .button {
-  position: relative;
-  border-radius: 80px;
-  padding: 12px 24px;
-  display: inline-flex;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
-  .arrow {
-    margin-left: 0;
-    width: 0;
+    position: relative;
+    border-radius: 10px;
+    padding: 18px 24px;
+    display: inline-flex;
+    align-items: center;
     overflow: hidden;
-    opacity: 0;
-  }
-  &:hover {
+    cursor: pointer;
+    background-color: var(--tangerine-500);
+    color: var(--base-white);
+
     .arrow {
-      margin-left: 12px;
-      width: 14px;
-      height: 14px;
-      opacity: 1;
+        margin-left: 0;
+        width: 0;
+        overflow: hidden;
+        opacity: 0;
     }
-  }
+
+    &:hover {
+        .arrow {
+            margin-left: 12px;
+            width: 14px;
+            height: 14px;
+            opacity: 1;
+            fill: var(--button-color-hover);
+        }
+
+        border: 1px solid var(--button-border-hover);
+        background-color: var(--button-bg-hover);
+        color: var(--button-color-hover);
+    }
 }

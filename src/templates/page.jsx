@@ -55,9 +55,6 @@ export const query = graphql`
       slug {
         current
       }
-      image {
-        ...ImageFragment
-      }
       sections {
         __typename # __typename used above for debugging
         ...TwoColumnSectionFragment
@@ -68,7 +65,7 @@ export const query = graphql`
     }
     settings: sanitySettings {
       ...NavbarFragment
-      #   ...FooterFragment
+      ...FooterFragment
     }
   }
 `;

@@ -8,6 +8,12 @@ export default {
       title: 'Logo',
       type: 'customImage',
     },
+    {
+      name: 'footerLinks',
+      title: 'Footer Links',
+      type: 'array',
+      of: [{ type: 'footerLink' }],
+    },
   ],
   preview: {
     prepare() {

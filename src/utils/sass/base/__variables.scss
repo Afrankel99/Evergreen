@@ -1,23 +1,19 @@
 /*=============================================>>>>>
 = Body font colour =
 ===============================================>>>>>*/
-$textcolor: #101828;
-$primary: #3048ce;
+$textcolor: #111111;
 
 /*=============================================>>>>>
 = Brand colours =
 ===============================================>>>>>*/
-$primary-25: #f7f8ff;
-$primary-50: #dfe2f7;
-$primary-100: #cbd1f3;
-$primary-200: #a4afea;
-$primary-300: #7e8ce0;
-$primary-400: #576ad7;
-$primary-500: #3048ce; // primary
-$primary-600: #273aa7;
-$primary-700: #1e2d80;
-$primary-800: #151f5a;
-$primary-900: #0c1233;
+$primary: #1d1dff;
+$secondary: #01f7ff;
+$tertiary: #2C405A;
+$highlight: #ff01b1;
+$primary-darker: darken($primary, 5%);
+$secondary-darker: darken($secondary, 5%);
+$tertiary-darker: darken($tertiary, 5%);
+$highlight-darker: darken($highlight, 5%);
 
 /*=============================================>>>>>
 = Additional =
@@ -33,61 +29,22 @@ $off-white: #f2f2f2;
 $off-black: #1a1a1a;
 
 /*=============================================>>>>>
-= Gray colours =
+= User noticiation colours =
 ===============================================>>>>>*/
-$gray-25: #fcfcfd;
-$gray-50: #f9fafb;
-$gray-100: #f2f4f7;
-$gray-200: #eaecf0;
-$gray-300: #d0d5dd;
-$gray-400: #98a2b3;
-$gray-500: #667085;
-$gray-600: #475467;
-$gray-700: #344054;
-$gray-800: #1d2939;
-$gray-900: #101828;
+$success: #5cb85c;
+$warning: #f0ad4e;
+$error: #d9534f;
 
 /*=============================================>>>>>
-= Error/Warning/Success colours =
+= Social colours =
 ===============================================>>>>>*/
-$error-25: #fffbfa;
-$error-50: #fef3f2;
-$error-100: #fee4e2;
-$error-200: #fecdca;
-$error-300: #fda29b;
-$error-400: #f97066;
-$error-500: #f04438;
-$error-600: #d92d20;
-$error-700: #b42318;
-$error-800: #912018;
-$error-900: #7a271a;
-
-$warning-25: #fffcf5;
-$warning-50: #fffaeb;
-$warning-100: #fef0c7;
-$warning-200: #fedf89;
-$warning-300: #fec84b;
-$warning-400: #fdb022;
-$warning-500: #f79009;
-$warning-600: #dc6803;
-$warning-700: #b54708;
-$warning-800: #93370d;
-$warning-900: #7a2e0e;
-
-$success-25: #f6fef9;
-$success-50: #ecfdf3;
-$success-100: #d1fadf;
-$success-200: #a6f4c5;
-$success-300: #6ce9a6;
-$success-400: #32d583;
-$success-500: #12b76a;
-$success-600: #039855;
-$success-700: #027a48;
-$success-800: #05603a;
-$success-900: #054f31;
-
-$blue-50: #EFF8FF;
-$blue-700: #175CD3;
-
-$orange-50: #FFF4ED;
-$orange-700: #B93815;
+$twitter-hex: #00aced;
+$facebook-hex: #3b5998;
+$linkedin-hex: #007bb6;
+$youtube-hex: #bb0000;
+$tumblr-hex: #32506d;
+$instagram-hex: #517fa4;
+$vimeo-hex: #aad450;
+$lastfm-hex: #D51007;
+$google-hex: #4285f4;
+$github-hex: #4078c0;

@@ -3,14 +3,14 @@
 ===============================================>>>>>*/
 
 body {
-    @include p1-regular();
-    font-size: 16px;
-    font-size-adjust: auto;
-    text-align: left;
-    word-wrap: break-word;
-    text-rendering: optimizeLegibility;
-    font-smoothing: antialiased;
-    text-shadow: 0 0 1px transparent;
+  @include body-font();
+  font-size: 16px;
+  font-size-adjust: auto;
+  text-align: left;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  text-shadow: 0 0 1px transparent;
 }
 
 
@@ -18,11 +18,11 @@ body {
 //   Headings
 // --------------------------------------------------------------------------
 
-h1+h2,
-h2+h3,
-h3+h4,
-h5+h6 {
-    margin-top: 0;
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h5 + h6 {
+  margin-top: 0;
 }
 
 h1,
@@ -31,88 +31,67 @@ h3,
 h4,
 h5,
 h6 {
-    @include h1-regular();
-    line-height: 1.2em;
-
-    &:first-child {
-        margin-top: 0;
-    }
+  @include heading-font();
+  line-height: 1.2em;
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
-h1 {
-    @include h1-semibold();
-}
-
-h2 {
-    @include h2-semibold();
-}
-
-h3 {
-    @include h3-semibold();
-}
-
-h4 {
-    @include h4-semibold();
-}
-
-h5 {
-    @include h5-semibold();
-}
-
-h6 {
-    font-size: 14px;
-}
+h1 { @include display2Xl; }
+h2 { @include displayXl; }
+h3 { @include displayLg; }
+h4 { @include displayMd; }
+h5 { @include displayXs; }
+h6 { font-size: 14px; }
 
 // --------------------------------------------------------------------------
 //   Content Elements
 // --------------------------------------------------------------------------
 
 a {
-    text-decoration: none;
-    color: $textcolor;
-
-    &:hover {
-        text-decoration: underline;
-    }
+  text-decoration: none;
+  color: $textcolor;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-// p { // revisit this when starting blog
-//     margin-top: 0;
-//     margin-bottom: 20px;
-// }
+p {
+  margin-top: 0;
+}
 
 strong {
-    font-weight: $font-weight-bold;
+  font-weight: $font-weight-bold;
 }
 
 figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 hr {
-    display: block;
-    margin: 20px 0;
-    border: 0;
+  display: block;
+  margin: 20px 0;
+  border: 0;
 }
 
 blockquote {
-    margin: 0 0 20px;
-    font-family: cambria, georgia, times, serif;
-    font-style: italic;
-
-    p {
-        &:last-child {
-            margin-bottom: 0;
-        }
+  margin: 0 0 20px;
+  font-family: cambria, georgia, times, serif;
+  font-style: italic;
+  p {
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 }
 
 table {
-    width: 100%;
+  width: 100%;
 }

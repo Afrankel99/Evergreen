@@ -1,0 +1,60 @@
+:root {
+  --base-black: #000000;
+  --base-white: #ffffff;
+  --cream-100: #FEFDF7;
+  --cream-500: #FFE9CC;
+  --tangerine-500: #EB3D00;
+  --salmon-500: #FFB4A0;
+  --pine-500: #22411E;
+  --sacramento-500: #132111;
+}
+
+// // for the header
+// [data-theme="transparent"] {
+//   --bkg-default: transparent;
+//   --frg-headings: var(--base-white);
+//   --frg-body: var(--base-white);
+// }
+
+// [data-theme="white"] {
+//   --bkg-default: var(--base-white);
+//   --bkg-light: var(--dark-sand);
+//   --frg-tagline: var(--primary-mrl-red-500);
+//   --frg-headings: var(--base-black);
+//   --frg-body: var(--base-black);
+//   --frg-subtle: var(--gray-500);
+//   --frg-stroke: var(--primary-grey-200);
+//   // Clickable icon sitting on cards
+//   --button-accent: #FDF5F5;
+//   // Text links with arrow SVG
+//   --arrow-button-color: var(--base-black);
+//   --button-arrow: var(--primary-mrl-red-500);
+//   // Button
+//   --button-bg: transparent;
+//   --button-color: var(--base-black);
+//   --button-border: var(--base-black);
+//   // Button Hover
+//   --button-bg-hover: var(--base-black);
+//   --button-color-hover: var(--base-white);
+//   --button-border-hover: var(--base-black);
+// }
+
+// [data-theme="black"] {
+//   --bkg-default: var(--base-black);
+//   --frg-tagline: var(--base-white);
+//   --frg-headings: var(--base-white);
+//   --frg-body: var(--base-white);
+//   --frg-subtle: var(--base-white);
+//   --frg-stroke: var(--primary-grey-400);
+//   // Text links with arrow SVG
+//   --button-arrow: var(--base-white);
+//   --arrow-button-color: var(--base-white);
+//   // Button
+//   --button-bg: var(--primary-mrl-red-500);
+//   --button-color: var(--base-white);
+//   --button-border: var(--primary-mrl-red-500);
+//   // Button Hover
+//   --button-bg-hover: var(--base-white);
+//   --button-color-hover: var(--base-black);
+//   --button-border-hover: var(--base-black);
+// }

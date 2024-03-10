@@ -202,7 +202,7 @@
 }
 
 .link {
-    @include p2-medium();
+    // @include p2-medium();
     cursor: pointer;
 
     &:hover {

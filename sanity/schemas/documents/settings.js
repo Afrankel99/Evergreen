@@ -12,12 +12,12 @@ export default {
       type: 'navbar',
       group: 'navbar',
     },
-    // {
-    //   name: `footer`,
-    //   title: `Footer`,
-    //   type: `footer`,
-    //   group: 'footer',
-    // },
+    {
+      name: `footer`,
+      title: `Footer`,
+      type: `footer`,
+      group: 'footer',
+    },
   ],
   preview: {
     prepare() {
