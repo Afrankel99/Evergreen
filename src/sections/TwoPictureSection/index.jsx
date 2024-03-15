@@ -13,10 +13,12 @@ const TwoPictureSection = (props) => {
     <Section {...spacingOptions}>
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>{title}</h1>
-        <p>{content}</p>
+        <p className={styles.textContainer}>{content}</p>
         <Button className={styles.button} title={button.title} to={button.link} />
-        <Image imageData={imageOne}></Image>
-        <Image imageData={imageTwo}></Image>
+      <div className={styles.imageContainer}>
+        <Image className={styles.firstImage} imageData={imageOne}></Image>
+        <Image className={styles.secondImage} imageData={imageTwo}></Image>
+        </div>
       </div>
     </Section>
   );
