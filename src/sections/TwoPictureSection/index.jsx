@@ -10,14 +10,14 @@ const TwoPictureSection = (props) => {
   const { title, content, button, imageOne, imageTwo, spacingOptions } = data;
 
   return (
-    <Section {...spacingOptions}>
+    <Section className={styles.section} sectionName="TwoPictureSection" {...spacingOptions}>
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.textContainer}>{content}</p>
         <Button className={styles.button} title={button.title} to={button.link} />
-      <div className={styles.imageContainer}>
-        <Image className={styles.firstImage} imageData={imageOne}></Image>
-        <Image className={styles.secondImage} imageData={imageTwo}></Image>
+        <div className={styles.imageContainer}>
+          <Image className={styles.firstImage} imageData={imageOne}></Image>
+          <Image className={styles.secondImage} imageData={imageTwo}></Image>
         </div>
       </div>
     </Section>
