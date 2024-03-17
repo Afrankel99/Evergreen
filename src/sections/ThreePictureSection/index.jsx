@@ -8,7 +8,6 @@ import Image from '~components/Common/Image';
 import * as styles from './styles.module.scss';
 
 const ThreePictureSection = (props) => {
-  console.log('ThreePictureSection', props);
   const { data } = props;
   const { title, content, imageOne, imageTwo, imageThree, spacingOptions } = data;
 

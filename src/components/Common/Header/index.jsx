@@ -11,7 +11,6 @@ import * as styles from './styles.module.scss';
 const Header = (props) => {
   const { data, pathname } = props;
   const { image: logo, navItems, addButton, button } = data;
-  console.log('props: ', props);
   const loginRef = useRef(null);
   const wrapperRef = useRef(null);
 
