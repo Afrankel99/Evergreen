@@ -43,8 +43,8 @@ export default {
       },
       initialValue: 'bouquet',
     },
-
     {
+      // reference array
       name: `tags`,
       title: `Tags`,
       description: `These are references to the Product Tags. The tag must be published before it can be added to a product.`,

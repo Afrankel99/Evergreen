@@ -1,0 +1,51 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+
+    :global(.embla) {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    :global(.embla__slides__container) {
+        // overflow: hidden;
+        display: flex;
+    }
+
+    :global(.embla__slide) {
+        flex: 0 0 100%;
+        min-width: 0;
+        cursor: grab;
+        user-select: none;
+        position: relative;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
+:global(.embla__button) {
+    border: 0;
+    display: block;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    :global(.embla__button--prev) {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    :global(.embla__button--next) {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

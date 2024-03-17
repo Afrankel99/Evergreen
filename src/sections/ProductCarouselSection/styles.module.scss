@@ -1,0 +1,111 @@
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+}
+
+.categoriesContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 730px;
+    margin: auto;
+}
+
+.categoryButton {
+    border: none;
+    background-color: transparent;
+    color: rgb(142, 142, 142);
+    font-size: 24px;
+
+    &.active {
+        color: black;
+    }
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.imageWrapper {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.name {
+    font-size: 18px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+
+    :global(.embla) {
+        max-width: 1150px;
+        justify-content: center;
+    }
+
+    :global(.embla__slide) {
+        --gap: 16px;
+        --width: 33%;
+
+        @include media-down(large-tablet) {
+            --width: 45%;
+        }
+
+        @include media-down(large-mobile) {
+            --width: 75%;
+        }
+
+        @include media-down(mobile) {
+            --width: 85%;
+        }
+
+        flex: 0 0 calc(var(--width) - var(--gap));
+        margin-right: var(--gap);
+    }
+
+    :global(.embla__slide--selected) {}
+
+    :global(.embla__dotsAndArrows) {
+        bottom: calc(50% - 28px);
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+
+        @include media-down(large-mobile) {
+            display: none;
+        }
+
+        :global(.embla__dotsAndArrows__Inner) {
+            justify-content: space-between;
+            width: 100%;
+            display: flex;
+        }
+
+        :global(.embla__button) {
+            :global(svg) {
+                :global(rect) {
+                    stroke: black;
+                }
+
+                :global(path) {
+                    fill: black;
+                }
+            }
+        }
+    }
+}

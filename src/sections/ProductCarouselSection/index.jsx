@@ -1,0 +1,50 @@
+import React, { useState } from 'react';
+import classNames from 'classnames';
+import Section from '~components/Common/Section';
+import Image from '~components/Common/Image';
+import Button from '~components/Common/Button';
+import Carousel from '~components/Common/Carousel';
+
+import * as styles from './styles.module.scss';
+
+const ProductCarouselSection = (props) => {
+  const { data } = props;
+  const { categories, spacingOptions } = data;
+
+  const [activeCategory, setActiveCategory] = useState(categories[1]);
+
+  // helper function to render each product (takes in the product var and then returns the JSX for the product card)
+  const renderProduct = (product) => (
+    <div key={product?._key} className={styles.product}>
+      <div className={styles.imageWrapper}>
+        <Image imageData={product?.images?.[0]}></Image>
+      </div>
+      <div className={styles.textContainer}>
+        <span className={styles.name}>{product?.name}</span>
+        <span className={styles.price}>{`$${product?.price}`}</span>
+      </div>
+    </div>
+  );
+
+  return (
+    <Section className={styles.section} sectionName="ProductCarouselSection" {...spacingOptions}>
+      <div className={styles.contentContainer}>
+        <div className={styles.categoriesContainer}>
+          {categories.map((category, index) => (
+            <Button
+              key={index}
+              className={classNames(styles.categoryButton, { [styles.active]: category === activeCategory })}
+              title={category.name}
+              onClick={() => setActiveCategory(category)}
+            />
+          ))}
+        </div>
+        <Carousel addArrows options={{ loop: true }} className={styles.carousel}>
+          {activeCategory?.products?.map((product) => renderProduct(product))}
+        </Carousel>
+      </div>
+    </Section>
+  );
+};
+
+export default ProductCarouselSection;

@@ -36,10 +36,12 @@ export default {
       title: `Sections`,
       type: `array`,
       of: [
+        // note: these need to be in alphabetical order
+        { type: 'bannerSection' },
+        { type: 'productCarouselSection' },
+        { type: 'threePictureSection' },
         { type: 'twoColumnSection' },
         { type: 'twoPictureSection' },
-        { type: 'threePictureSection' },
-        { type: 'bannerSection' },
       ],
       group: 'data',
     },

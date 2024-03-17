@@ -4626,6 +4626,24 @@ electron-to-chromium@^1.4.648:
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.665.tgz"
   integrity sha512-UpyCWObBoD+nSZgOC2ToaIdZB0r9GhqT2WahPKiSki6ckkSuKhQNso8V2PrFcHBMleI/eqbKgVQgVC4Wni4ilw==
 
+embla-carousel-react@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-8.0.0.tgz#73abd0a30c2faa37532ae3c4c0b484867e066d5f"
+  integrity sha512-qT0dii8ZwoCtEIBE6ogjqU2+5IwnGfdt2teKjCzW88JRErflhlCpz8KjWnW8xoRZOP8g0clRtsMEFoAgS/elfA==
+  dependencies:
+    embla-carousel "8.0.0"
+    embla-carousel-reactive-utils "8.0.0"
+
+embla-carousel-reactive-utils@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.0.tgz#65342e9feb8d2780fcb1d1d6050ce41837385efa"
+  integrity sha512-JCw0CqCXI7tbHDRogBb9PoeMLyjEC1vpN0lDOzUjmlfVgtfF+ffLaOK8bVtXVUEbNs/3guGe3NSzA5J5aYzLzw==
+
+embla-carousel@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-8.0.0.tgz#164d0faafe3220c2584c08d45a738c9fb4efc344"
+  integrity sha512-ecixcyqS6oKD2nh5Nj5MObcgoSILWNI/GtBxkidn5ytFaCCmwVHo2SecksaQZHcARMMpIR2dWOlSIdA1LkZFUA==
+
 emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
@@ -5956,6 +5974,14 @@ gatsby-plugin-sharp@^5.13.1:
     probe-image-size "^7.2.3"
     semver "^7.5.3"
     sharp "^0.32.6"
+
+gatsby-plugin-svgr-svgo@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-svgr-svgo/-/gatsby-plugin-svgr-svgo-2.0.0.tgz#2d230c9987095f223e8fe1fcce03f2fd760ebb9d"
+  integrity sha512-PBh+3fV70BWdKkyKCvlQdTVhcCahbeHo850Hc6bFKu8P4H3DDDsxEOx52uLhGUds1y5hsKQV/VXRUaM6gjkY3w==
+  dependencies:
+    svgo "^2.8.0"
+    svgo-loader "^3.0.0"
 
 gatsby-plugin-typescript@^5.13.1:
   version "5.13.1"
@@ -7642,7 +7668,7 @@ loader-utils@^1.2.3:
     emojis-list "^3.0.0"
     json5 "^1.0.1"
 
-loader-utils@^2.0.0, loader-utils@^2.0.4:
+loader-utils@^2.0.0, loader-utils@^2.0.3, loader-utils@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/loader-utils/-/loader-utils-2.0.4.tgz"
   integrity sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==
@@ -10672,7 +10698,15 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svgo@^2.7.0:
+svgo-loader@^3.0.0:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-3.0.3.tgz#ee193c53610adf32825fa5861ba444dfc9ad0294"
+  integrity sha512-6YdWYge3h0aCb8xHvPhGP4hofIU1OWfZm0I8bteab7hddeRN4fl3aIkN8Z/ZB/ji9QrMOd6C8wT8F1p31GUwuQ==
+  dependencies:
+    loader-utils "^2.0.3"
+    svgo "^2.8.0"
+
+svgo@^2.7.0, svgo@^2.8.0:
   version "2.8.0"
   resolved "https://registry.npmjs.org/svgo/-/svgo-2.8.0.tgz"
   integrity sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==

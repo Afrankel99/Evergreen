@@ -31,3 +31,37 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    SanityProductTag: {
+      products: {
+        type: ['SanityProduct'],
+        args: {
+          limit: 'Int',
+        },
+        resolve: async (source, args, context) => {
+          const { entries: productsArray } = await context.nodeModel.findAll({
+            type: 'SanityProduct',
+            query: {
+              filter: {
+                tags: {
+                  elemMatch: {
+                    name: {
+                      eq: source.name,
+                    },
+                  },
+                },
+              },
+              sort: {
+                _createdAt: 'DESC',
+              },
+            },
+          });
+          return args.limit ? productsArray.slice(0, args.limit) : productsArray;
+        },
+      },
+    },
+  };
+  createResolvers(resolvers);
+};
