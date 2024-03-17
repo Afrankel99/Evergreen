@@ -57,10 +57,11 @@ export const query = graphql`
       }
       sections {
         __typename # __typename used above for debugging
+        ...BannerSectionFragment
+        ...ProductCarouselSectionFragment
+        ...ThreePictureSectionFragment
         ...TwoColumnSectionFragment
         ...TwoPictureSectionFragment
-        ...ThreePictureSectionFragment
-        ...BannerSectionFragment
       }
     }
     settings: sanitySettings {

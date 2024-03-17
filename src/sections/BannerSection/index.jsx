@@ -19,7 +19,9 @@ const BannerSection = (props) => {
           {content && <p className={styles.title}>{content}</p>}
           {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
         </div>
-        <div className={styles.imageWrapper}>{/* <Image imageData={image}></Image> */}</div>
+        <div className={styles.imageWrapper}>
+          <Image imageData={image}></Image>
+        </div>
       </div>
     </Section>
   );
