@@ -2,7 +2,8 @@ import { defineConfig } from 'sanity';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from './schemas';
 import { deskTool } from 'sanity/desk';
-import { TbSettings } from 'react-icons/tb';
+import { TbSettings, TbShoppingBag, TbTag } from 'react-icons/tb';
+import { FaRegWindowMaximize } from 'react-icons/fa';
 
 export default defineConfig({
   name: 'default',
@@ -21,10 +22,26 @@ export default defineConfig({
         S.list()
           .title('Content')
           .items([
-            ...S.documentTypeListItems().filter((listItem) => {
-              if (listItem.getId() === 'media.tag') return false;
-              return !['settings'].includes(listItem.getId());
-            }),
+            S.listItem()
+              .title('Pages')
+              .icon(FaRegWindowMaximize)
+              .child(() =>
+                S.documentTypeList('page').title('Pages').menuItems(S.documentTypeList('page').getMenuItems())
+              ),
+            S.listItem()
+              .title('Products')
+              .icon(TbShoppingBag)
+              .child(() =>
+                S.documentTypeList('product').title('Products').menuItems(S.documentTypeList('product').getMenuItems())
+              ),
+            S.listItem()
+              .title('Product Tags')
+              .icon(TbTag)
+              .child(() =>
+                S.documentTypeList('productTag')
+                  .title('Product Tags')
+                  .menuItems(S.documentTypeList('productTag').getMenuItems())
+              ),
             S.divider(),
             // Settings
             S.listItem()

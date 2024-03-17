@@ -1,5 +1,7 @@
 // documents
 import page from './documents/page';
+import product from './documents/product';
+import productTag from './documents/productTag';
 import settings from './documents/settings';
 
 // sections
@@ -22,6 +24,8 @@ import footer from './objects/footer';
 export const schemaTypes = [
   // documents
   page,
+  product,
+  productTag,
   settings,
 
   // sections
