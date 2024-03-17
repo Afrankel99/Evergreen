@@ -6,6 +6,7 @@ export default {
   type: 'object',
   groups: defaultSectionGroups,
   //   icon: LuColumns,
+  // TODO: add icon here
   fields: [
     {
       name: `title`,
@@ -38,12 +39,6 @@ export default {
       type: 'spacingOptions',
       group: 'styles',
     },
-    // {
-    //   name: 'alignMedia',
-    //   title: 'Align Media',
-    //   type: 'alignMedia',
-    //   group: 'styles',
-    // },
   ],
   preview: {
     select: {

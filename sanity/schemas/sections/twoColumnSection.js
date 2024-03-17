@@ -6,6 +6,7 @@ export default {
   type: 'object',
   groups: defaultSectionGroups,
   //   icon: LuColumns,
+  // TODO: add icon here
   fields: [
     {
       name: `title`,

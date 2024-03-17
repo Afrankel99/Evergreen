@@ -5,10 +5,11 @@ import productTag from './documents/productTag';
 import settings from './documents/settings';
 
 // sections
+import bannerSection from './sections/bannerSection';
+import productCarouselSection from './sections/productCarouselSection';
+import threePictureSection from './sections/threePictureSection';
 import twoColumnSection from './sections/twoColumnSection';
 import twoPictureSection from './sections/twoPictureSection';
-import threePictureSection from './sections/threePictureSection';
-import bannerSection from './sections/bannerSection';
 
 // objects
 import alignMedia from './objects/alignMedia';
@@ -33,6 +34,7 @@ export const schemaTypes = [
   twoPictureSection,
   threePictureSection,
   bannerSection,
+  productCarouselSection,
 
   // objects
   alignMedia,

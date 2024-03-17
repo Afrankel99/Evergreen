@@ -52,12 +52,6 @@ export default {
       initialValue: 'white',
       group: 'styles',
     },
-    // {
-    //   name: 'alignMedia',
-    //   title: 'Align Media',
-    //   type: 'alignMedia',
-    //   group: 'styles',
-    // },
     {
       name: 'spacingOptions',
       title: 'Spacing Options',

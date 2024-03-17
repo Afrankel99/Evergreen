@@ -6,6 +6,7 @@ export default {
   type: 'object',
   groups: defaultSectionGroups,
   //   icon: LuColumns,
+  // TODO: add icon here
   fields: [
     {
       name: `title`,
@@ -65,6 +66,7 @@ export default {
     //   type: 'alignMedia',
     //   group: 'styles',
     // },
+    // TODO: add alignMedia (can use two col section as an example)
     {
       name: 'spacingOptions',
       title: 'Spacing Options',

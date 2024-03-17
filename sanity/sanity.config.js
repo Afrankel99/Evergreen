@@ -22,18 +22,25 @@ export default defineConfig({
         S.list()
           .title('Content')
           .items([
+            // Pages
             S.listItem()
               .title('Pages')
               .icon(FaRegWindowMaximize)
               .child(() =>
                 S.documentTypeList('page').title('Pages').menuItems(S.documentTypeList('page').getMenuItems())
               ),
+
+            S.divider(),
+
+            // Products
             S.listItem()
               .title('Products')
               .icon(TbShoppingBag)
               .child(() =>
                 S.documentTypeList('product').title('Products').menuItems(S.documentTypeList('product').getMenuItems())
               ),
+
+            // Product Tags
             S.listItem()
               .title('Product Tags')
               .icon(TbTag)
@@ -42,7 +49,9 @@ export default defineConfig({
                   .title('Product Tags')
                   .menuItems(S.documentTypeList('productTag').getMenuItems())
               ),
+
             S.divider(),
+
             // Settings
             S.listItem()
               .title('Settings')
