@@ -14,3 +14,11 @@ body {
         margin: 10px 10px 0 0 !important;
     }
 }
+
+.main-children {
+    padding-top: var(--header-height);
+
+    &.isHome {
+        padding-top: 0;
+    }
+}

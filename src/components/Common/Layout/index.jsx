@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Footer, Header } from '~components';
+import classNames from 'classnames';
 import Header from '~components/Common/Header';
 import Footer from '~components/Common/Footer';
 import '~sass/global/styles.scss';
@@ -16,9 +16,8 @@ const Layout = (props) => {
   return (
     <>
       <Header data={settings?.navbar} pathname={pathname} />
-      <main>{children}</main>
+      <main className={classNames(pathname === '/' && 'isHome', 'main-children')}>{children}</main>
       {settings?.footer && <Footer data={settings?.footer} socialLinks={settings?.socialLinks} />}
-      {/* <div style={{ height: '80px', backgroundColor: 'lightgray' }}>Footer</div> */}
     </>
   );
 };

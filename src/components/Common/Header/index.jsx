@@ -16,7 +16,6 @@ const Header = (props) => {
 
   const [hamburgerMenuActive, setHamburgerMenuActive] = useState(false);
   const [active, setActive] = useState(false);
-  const [vh, setVh] = useState(0);
   const [headerHeight, setHeaderHeight] = useState(0);
   const [scrollDirection, setScrollDirection] = useState('up');
   const [scrolledPastThreshold, setScrolledPastThreshold] = useState(false);
@@ -25,19 +24,19 @@ const Header = (props) => {
 
   const { width } = useWindowSize();
 
-  // calculate header height
-  useEffect(() => {
-    const calculateHeaderHeight = () => {
-      if (wrapperRef.current) {
-        setHeaderHeight(wrapperRef.current.clientHeight);
-        setVh(window?.innerHeight);
-        document.documentElement.style.setProperty('--header-height', `${wrapperRef.current.clientHeight}px`);
-      }
-    };
-    calculateHeaderHeight();
-    window.addEventListener('resize', calculateHeaderHeight);
-    return () => window.removeEventListener('resize', calculateHeaderHeight);
-  }, [width]);
+  //   // calculate header height
+  //   useEffect(() => {
+  //     const calculateHeaderHeight = () => {
+  //       if (wrapperRef.current) {
+  //         setHeaderHeight(wrapperRef.current.clientHeight);
+  //         console.log('wrapperRef.current.clientHeight', wrapperRef.current.clientHeight);
+  //         document.documentElement.style.setProperty('--header-height', `${wrapperRef.current.clientHeight}px`);
+  //       }
+  //     };
+  //     calculateHeaderHeight();
+  //     window.addEventListener('resize', calculateHeaderHeight);
+  //     return () => window.removeEventListener('resize', calculateHeaderHeight);
+  //   }, []);
 
   // detect scroll direction
   useEffect(() => {
@@ -98,13 +97,13 @@ const Header = (props) => {
   return (
     <Section
       as="header"
+      sectionRef={wrapperRef}
       className={classNames(
         styles.header,
         pathname === '/' && styles.transparent,
         topOfPage && styles.top,
         scrollDirection === 'down' && scrolledPastThreshold ? styles.hidden : null
       )}
-      sectionRef={wrapperRef}
     >
       <div className={styles.contentContainer}>
         <div className={classNames(styles.navContainer, hamburgerMenuActive && styles.hamburgerActive)}>
@@ -123,7 +122,7 @@ const Header = (props) => {
                     navLink?.ctaLink?.internalLink?.slug?.current === pathname && styles.activeLink
                   )}
                 >
-                  <Link key={navLink?.title} className={classNames(styles.link, styles.navLink)} to={navLink?.ctaLink}>
+                  <Link key={navLink?.title} className={classNames(styles.link, styles.navLink)} to={navLink?.link}>
                     {navLink?.title}
                   </Link>
                 </li>

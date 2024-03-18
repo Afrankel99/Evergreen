@@ -1,5 +1,5 @@
-:global(main.background) {
-    padding-top: 0px;
+:root {
+    --header-height: 92px;
 }
 
 .header {
@@ -22,7 +22,8 @@
         transition: transform 0.45s ease;
     }
 
-    &.transparent { // if we want to make it transparent on home
+    &.transparent {
+        // if we want to make it transparent on home
         transition: all 0.45s ease;
 
         &.top {
@@ -67,20 +68,17 @@
     display: flex;
 
     &.activeLink {
-        .navLink {
-        }
+        .navLink {}
     }
 
     &:hover {
         .chevron {
             >svg {
-                >path {
-                }
+                >path {}
             }
         }
 
-        .navLink {
-        }
+        .navLink {}
     }
 
     @include media-up(large-tablet) {
@@ -355,14 +353,12 @@
 
         &.activeLink {
 
-            .navLink {
-            }
+            .navLink {}
         }
 
         &:hover {
 
-            .navLink {
-            }
+            .navLink {}
         }
 
         .dropdown {
@@ -374,8 +370,7 @@
             .navItem {
                 padding-left: 24px;
 
-                &:hover {
-                }
+                &:hover {}
             }
 
             .navItem {
