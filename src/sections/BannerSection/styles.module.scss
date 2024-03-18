@@ -38,11 +38,14 @@
     left: 0;
     z-index: -1;
     object-fit: cover !important;
+    filter: blur(8px);
+    -webkit-filter: blur(4px);
 }
 
 .title {
-    font-weight: medium;
-    height: 48px;
     width: 100%;
-    font-size: 40px;
+    text-align: center;
+    text-wrap: balance;
+    max-width: 1131px;
+    font-size: 80px;
 }
