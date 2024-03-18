@@ -8,6 +8,9 @@
     cursor: pointer;
     background-color: var(--tangerine-500);
     color: var(--base-white);
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid var(--tangerine-500);
 
     .arrow {
         margin-left: 0;
@@ -25,8 +28,11 @@
             fill: var(--button-color-hover);
         }
 
-        border: 1px solid var(--button-border-hover);
-        background-color: var(--button-bg-hover);
-        color: var(--button-color-hover);
+        color: var(--tangerine-500);
+        background-color: var(--base-white);
+        transition: all 0.3s ease-in-out;
+        // border: 1px solid var(--button-border-hover);
+        // background-color: var(--button-bg-hover);
+        // color: var(--button-color-hover);
     }
 }

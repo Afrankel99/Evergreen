@@ -23,7 +23,7 @@ const Button = (props) => {
     return (
       <Link to={to} {...rest} className={buttonClassNames}>
         {children || title}
-        {!hideArrow && <Arrow className={styles.arrow} />}
+        {/* {!hideArrow && <Arrow className={styles.arrow} />} */}
       </Link>
     );
   }
@@ -31,7 +31,7 @@ const Button = (props) => {
   return (
     <button type="button" {...rest} className={buttonClassNames}>
       {children || title}
-      {!hideArrow && <Arrow className={styles.arrow} />}
+      {/* {!hideArrow && <Arrow className={styles.arrow} />} */}
     </button>
   );
 };
