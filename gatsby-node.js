@@ -13,7 +13,15 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { data } = await graphql(`
     {
-      page: allSanityPage {
+      pages: allSanityPage {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
+
+      products: allSanityProduct {
         nodes {
           slug {
             current
@@ -23,10 +31,18 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  data.page.nodes.forEach(({ slug }) => {
+  data.pages.nodes.forEach(({ slug }) => {
     createPage({
       path: slug.current,
       component: require.resolve('./src/templates/page.jsx'),
+      context: { slug: slug.current },
+    });
+  });
+
+  data.products.nodes.forEach(({ slug }) => {
+    createPage({
+      path: slug.current,
+      component: require.resolve('./src/templates/product.jsx'),
       context: { slug: slug.current },
     });
   });

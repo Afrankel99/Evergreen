@@ -4,6 +4,8 @@ import Section from '~components/Common/Section';
 import Image from '~components/Common/Image';
 import Button from '~components/Common/Button';
 import Carousel from '~components/Common/Carousel';
+import Arrow from '~components/Common/Arrow';
+import Link from '~components/Common/Link';
 
 import * as styles from './styles.module.scss';
 
@@ -19,8 +21,15 @@ const ProductCarouselSection = (props) => {
       <div className={styles.imageWrapper}>
         <Image imageData={product?.images?.[0]}></Image>
       </div>
-      <div className={styles.textContainer}>
-        <span className={styles.name}>{product?.name}</span>
+      <div className={styles.infoContainer}>
+        <div className={styles.titleAndArrow}>
+          <Link className={styles.name} to={product?.slug?.current}>
+            {product?.name}
+          </Link>
+          <Link className={styles.arrowLink} to={product?.slug?.current}>
+            <Arrow className={styles.arrow} />
+          </Link>
+        </div>
         <span className={styles.price}>{`$${product?.price}`}</span>
       </div>
     </div>

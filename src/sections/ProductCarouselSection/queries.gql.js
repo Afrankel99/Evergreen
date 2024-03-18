@@ -13,6 +13,9 @@ export const ProductCarouselSectionFragment = graphql`
         images {
           ...ImageFragment
         }
+        slug {
+          current
+        }
       }
     }
     spacingOptions {

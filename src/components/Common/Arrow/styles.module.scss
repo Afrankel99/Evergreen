@@ -1,0 +1,9 @@
+.arrow {
+    &:hover {
+        cursor: pointer;
+    }
+
+    path {
+        fill: black;
+    }
+}

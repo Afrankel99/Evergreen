@@ -36,10 +36,16 @@
     overflow: hidden;
 }
 
-.textContainer {
+.infoContainer {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
+}
+
+.titleAndArrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .name {

@@ -3,7 +3,13 @@ export default {
   title: 'Slug',
   type: 'slug',
   options: {
-    source: `title`,
+    source: (document) => {
+      if (document.title) {
+        return `title`;
+      } else {
+        return `name`;
+      }
+    },
     slugify: (input) => `/${input.toLowerCase().replace(/\s+/g, '-')}/`,
   },
   validation: (Rule) =>
