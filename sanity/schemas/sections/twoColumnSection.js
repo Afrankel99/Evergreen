@@ -1,11 +1,12 @@
 import defaultSectionGroups from '../common/defaultSectionGroups';
+import { TbTextCaption } from 'react-icons/tb';
 
 export default {
   name: 'twoColumnSection',
   title: 'Two Column',
   type: 'object',
   groups: defaultSectionGroups,
-  //   icon: LuColumns,
+  icon: TbTextCaption,
   // TODO: add icon here
   fields: [
     {

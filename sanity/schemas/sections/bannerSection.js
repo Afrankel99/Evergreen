@@ -1,12 +1,12 @@
 import defaultSectionGroups from '../common/defaultSectionGroups';
+import { TbBrandEtsy } from 'react-icons/tb';
 
 export default {
   name: 'bannerSection',
   title: 'Banner',
   type: 'object',
   groups: defaultSectionGroups,
-  //   icon: LuColumns,
-  // TODO: add icon here
+  icon: TbBrandEtsy,
   fields: [
     {
       name: `title`,

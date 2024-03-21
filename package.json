@@ -19,7 +19,8 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
