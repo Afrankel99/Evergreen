@@ -1,30 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Common/Layout';
-import Image from '../components/Common/Image';
-import Section from '../components/Common/Section';
-
-import * as styles from './product.module.scss';
+import ProductLanding from '../components/Product/productLanding';
 
 const Product = (props) => {
   const { location, data: staticData } = props;
   const { sanityProduct, settings } = staticData;
-  const { name, description, images, price } = sanityProduct;
 
   return (
     <Layout location={location} settings={settings}>
-      <Section className={styles.section} sectionName="ProductPage" sectionSpacing="l">
-        <div className={styles.contentContainer}>
-          <div className={styles.imageContainer}>
-            <Image imageData={images?.[0]}></Image>
-          </div>
-          <div className={styles.textContainer}>
-            {name && <h1 className={styles.name}>{name}</h1>}
-            {price && <span className={styles.price}>{`$${price}`}</span>}
-            {description && <p className={styles.body}>{description}</p>}
-          </div>
-        </div>
-      </Section>
+      <ProductLanding data={sanityProduct} />
     </Layout>
   );
 };
