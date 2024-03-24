@@ -1,12 +1,13 @@
 import defaultSectionGroups from '../common/defaultSectionGroups';
+import { TbPhoto } from 'react-icons/tb';
 
 export default {
   name: 'twoPictureSection',
   title: 'Two Picture',
   type: 'object',
   groups: defaultSectionGroups,
-  //   icon: LuColumns,
-  // TODO: add icon here
+  icon: TbPhoto,
+
   fields: [
     {
       name: `title`,

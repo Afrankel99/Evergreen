@@ -1,11 +1,12 @@
 import defaultSectionGroups from '../common/defaultSectionGroups';
+import { TbPictureInPictureTop } from 'react-icons/tb';
 
 export default {
   name: 'threePictureSection',
   title: 'Three Picture',
   type: 'object',
   groups: defaultSectionGroups,
-  //   icon: LuColumns,
+  icon: TbPictureInPictureTop,
   fields: [
     {
       name: `title`,

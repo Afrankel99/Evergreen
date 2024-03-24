@@ -1,12 +1,12 @@
 import defaultSectionGroups from '../common/defaultSectionGroups';
-import { TbShoppingBag } from 'react-icons/tb';
+import { TbCarouselHorizontal } from 'react-icons/tb';
 
 export default {
   name: 'productCarouselSection',
   title: 'Product Carousel',
   type: 'object',
   groups: defaultSectionGroups,
-  icon: TbShoppingBag,
+  icon: TbCarouselHorizontal,
   fields: [
     {
       name: `categories`,
