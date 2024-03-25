@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Common/Layout';
-import ProductLanding from '../components/Product/ProductLanding';
+import ProductDetails from '../components/Product/ProductDetails';
+import ProductSuggestions from '../components/Product/ProductSuggestions';
 
 const Product = (props) => {
   const { location, data: staticData } = props;
@@ -9,7 +10,8 @@ const Product = (props) => {
 
   return (
     <Layout location={location} settings={settings}>
-      <ProductLanding data={sanityProduct} />
+      <ProductDetails data={sanityProduct} />
+      <ProductSuggestions data={sanityProduct} />
     </Layout>
   );
 };
