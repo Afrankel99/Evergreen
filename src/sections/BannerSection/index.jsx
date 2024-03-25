@@ -1,10 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
-import handleLink from '~components/Common/Link/handleLink';
-import Link from '~components/Common/Link';
 import Section from '~components/Common/Section';
 import Image from '~components/Common/Image';
 import Button from '~components/Common/Button';
+
 import * as styles from './styles.module.scss';
 
 const BannerSection = (props) => {

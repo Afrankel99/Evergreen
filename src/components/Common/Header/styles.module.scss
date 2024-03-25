@@ -13,8 +13,8 @@
     background-color: white;
 
     @include media-down(large-tablet) {
-        padding: 24px 0;
-        background-color: grey;
+        padding: 24px;
+        background-color: var(--sacramento-500);
     }
 
     &.hidden {
