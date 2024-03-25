@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Common/Layout';
-import ProductLanding from '../components/Product/productLanding';
+import ProductLanding from '../components/Product/ProductLanding';
 
 const Product = (props) => {
   const { location, data: staticData } = props;

@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import Image from '../components/Common/Image';
-import Section from '../components/Common/Section';
+import Image from '../Common/Image';
+import Section from '../Common/Section';
 
 import * as styles from './styles.module.scss';
 
