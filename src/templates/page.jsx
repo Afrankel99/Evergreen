@@ -62,6 +62,7 @@ export const query = graphql`
         ...ThreePictureSectionFragment
         ...TwoColumnSectionFragment
         ...TwoPictureSectionFragment
+        ...InstagramSectionFragment
       }
     }
     settings: sanitySettings {

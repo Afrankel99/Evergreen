@@ -10,6 +10,7 @@ import productCarouselSection from './sections/productCarouselSection';
 import threePictureSection from './sections/threePictureSection';
 import twoColumnSection from './sections/twoColumnSection';
 import twoPictureSection from './sections/twoPictureSection';
+import instagramSection from './sections/instagramSection';
 
 // objects
 import alignMedia from './objects/alignMedia';
@@ -35,6 +36,7 @@ export const schemaTypes = [
   threePictureSection,
   bannerSection,
   productCarouselSection,
+  instagramSection,
 
   // objects
   alignMedia,

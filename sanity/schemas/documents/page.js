@@ -42,6 +42,7 @@ export default {
         { type: 'threePictureSection' },
         { type: 'twoColumnSection' },
         { type: 'twoPictureSection' },
+        { type: 'instagramSection' },
       ],
       group: 'data',
     },
