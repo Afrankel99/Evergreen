@@ -1,6 +1,9 @@
 // @import '../../../utils/sass/media';
 // @import '../../../utils/sass/media.scss';
 // @import '../../../utils/sass/_media.scss';
+body {
+    background: var(--cream-100);
+}
 
 .buttons {
     display: flex;
