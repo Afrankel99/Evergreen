@@ -35,7 +35,7 @@ $font-weight-bold: 700;
   letter-spacing: -1.44px;
 
   @include media-down(large-mobile) {
-    font-size: 48px;
+    font-size: 60px;
   }
 }
 
@@ -59,7 +59,7 @@ $font-weight-bold: 700;
   letter-spacing: -0.96px;
 
   @include media-down(tablet) {
-    font-size: 28px;
+    font-size: 36px;
   }
 }
 
@@ -70,7 +70,7 @@ $font-weight-bold: 700;
   letter-spacing: -0.72px;
 
   @include media-down(tablet) {
-    // font-size: 24px;
+    font-size: 28px;
   }
 }
 
@@ -81,7 +81,7 @@ $font-weight-bold: 700;
   letter-spacing: -0.6px;
 
   @include media-down(tablet) {
-    // font-size: 18px;
+    font-size: 24px;
   }
 }
 
@@ -103,7 +103,7 @@ $font-weight-bold: 700;
   letter-spacing: -0.4px;
 
   @include media-down(tablet) {
-    // font-size: 18px;
+    font-size: 18px;
   }
 }
 
@@ -114,7 +114,7 @@ $font-weight-bold: 700;
   letter-spacing: -0.36px;
 
   @include media-down(tablet) {
-    // font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -125,7 +125,7 @@ $font-weight-bold: 700;
   letter-spacing: -0.32px;
 
   @include media-down(tablet) {
-    // font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -134,10 +134,6 @@ $font-weight-bold: 700;
   font-size: 14px;
   line-height: 150%;
   letter-spacing: -0.28px;
-
-  @include media-down(tablet) {
-    // font-size: 18px;
-  }
 }
 
 @mixin textXs {
@@ -145,8 +141,4 @@ $font-weight-bold: 700;
   font-size: 12px;
   line-height: 150%;
   letter-spacing: -0.24px;
-
-  @include media-down(tablet) {
-    // font-size: 18px;
-  }
 }

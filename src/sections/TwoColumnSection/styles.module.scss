@@ -56,7 +56,6 @@
     @include textMd;
     font-size: 18px;
     max-width: 544px;
-    color: var(--frg-body);
 
     @include media-down(tablet) {
         margin-top: 4px;

@@ -1,0 +1,51 @@
+.submissionError {
+    text-align: center;
+    margin-top: 20px
+}
+
+.submissionMessage {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.asterix {
+    color: var(--tangerine-500);
+}
+
+.splitLeft {
+    @include media-up(large-mobile) {
+        grid-column: 1;
+    }
+}
+
+.splitRight {
+    @include media-up(large-mobile) {
+        grid-column: 2;
+    }
+}
+
+.label {
+    @include textLg;
+}
+
+.formButton {
+    margin-top: 24px;
+}
+
+.fieldError {
+    color: var(--tangerine-500);
+}
