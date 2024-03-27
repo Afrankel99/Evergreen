@@ -5,13 +5,8 @@ export const InstagramSectionFragment = graphql`
     _key
     _type
     title
-    imageOne {
-      ...ImageFragment
-    }
-    imageTwo {
-      ...ImageFragment
-    }
-    imageThree {
+    images {
+      _key
       ...ImageFragment
     }
     theme

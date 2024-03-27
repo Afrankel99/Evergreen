@@ -15,22 +15,12 @@ export default {
       group: 'data',
     },
     {
-      name: `imageOne`,
-      title: `Image One`,
-      type: `customImage`,
+      name: `images`,
+      title: `Images`,
+      type: `array`,
+      of: [{ type: 'customImage' }],
       group: 'data',
-    },
-    {
-      name: `imageTwo`,
-      title: `Image Two`,
-      type: `customImage`,
-      group: 'data',
-    },
-    {
-      name: `imageThree`,
-      title: `Image Three`,
-      type: `customImage`,
-      group: 'data',
+      validation: (Rule) => Rule.required().min(3).max(3),
     },
     {
       name: 'theme',

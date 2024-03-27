@@ -1,6 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
-import handleLink from '~components/Common/Link/handleLink';
 import Link from '~components/Common/Link';
 import Section from '~components/Common/Section';
 import Image from '~components/Common/Image';
@@ -9,10 +7,10 @@ import * as styles from './styles.module.scss';
 
 const InstagramSection = (props) => {
   const { data } = props;
-  const { title, imageOne, imageTwo, imageThree, spacingOptions } = data;
+  const { title, images, spacingOptions } = data;
 
   return (
-    <Section className={styles.section} sectionName="InstagramSection" {...spacingOptions}>
+    <Section sectionName="InstagramSection" {...spacingOptions}>
       <div className={styles.contentContainer}>
         <Link
           className={styles.titleLink}
@@ -22,16 +20,12 @@ const InstagramSection = (props) => {
         >
           <h1 className={styles.title}>{title}</h1>
         </Link>
-        <div className={styles.imageRow}>
-          <div className={styles.imageContainer}>
-            <Image imageData={imageOne}></Image>
-          </div>
-          <div className={styles.imageContainer}>
-            <Image imageData={imageTwo}></Image>
-          </div>
-          <div className={styles.imageContainer}>
-            <Image imageData={imageThree}></Image>
-          </div>
+        <div className={styles.images}>
+          {images?.map((image) => (
+            <div key={image?._key} className={styles.imageContainer}>
+              <Image imageData={image} />
+            </div>
+          ))}
         </div>
       </div>
     </Section>
