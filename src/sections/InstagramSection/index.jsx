@@ -14,10 +14,25 @@ const InstagramSection = (props) => {
   return (
     <Section className={styles.section} sectionName="InstagramSection" {...spacingOptions}>
       <div className={styles.contentContainer}>
-        <h1 className={styles.title}>{title}</h1>
-        <Image imageData={imageOne}></Image>
-        <Image imageData={imageTwo}></Image>
-        <Image imageData={imageThree}></Image>
+        <Link
+          className={styles.titleLink}
+          to="https://www.instagram.com/evergreen_flowerstudio/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h1 className={styles.title}>{title}</h1>
+        </Link>
+        <div className={styles.imageRow}>
+          <div className={styles.imageContainer}>
+            <Image imageData={imageOne}></Image>
+          </div>
+          <div className={styles.imageContainer}>
+            <Image imageData={imageTwo}></Image>
+          </div>
+          <div className={styles.imageContainer}>
+            <Image imageData={imageThree}></Image>
+          </div>
+        </div>
       </div>
     </Section>
   );
