@@ -81,8 +81,6 @@
         margin-right: var(--gap);
     }
 
-    :global(.embla__slide--selected) {}
-
     :global(.embla__dotsAndArrows) {
         bottom: calc(50% - 28px);
         position: absolute;

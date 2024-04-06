@@ -48,6 +48,17 @@ export const query = graphql`
       slug {
         current
       }
+      similarProducts(limit: 3) {
+        _id
+        images {
+          ...ImageFragment
+        }
+        name
+        price
+        slug {
+          current
+        }
+      }
     }
     settings: sanitySettings {
       ...NavbarFragment

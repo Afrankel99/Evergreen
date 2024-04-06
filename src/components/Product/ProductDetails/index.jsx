@@ -5,6 +5,7 @@ import Section from '../../Common/Section';
 import { useForm } from 'react-hook-form';
 import { navigate } from 'gatsby';
 import Form from '../../Common/Form';
+import Carousel from '../../Common/Carousel';
 import AccordionInfo from './AccordionInfo';
 
 import * as styles from './styles.module.scss';
@@ -43,8 +44,14 @@ const ProductDetails = (props) => {
   return (
     <Section sectionName="ProductDetails" sectionSpacing="l">
       <div className={styles.contentContainer}>
-        <div className={styles.imageContainer}>
-          <Image imageData={images?.[0]}></Image>
+        <div className={styles.carouselContainer}>
+          <Carousel addArrows>
+            {images?.map((image) => (
+              <div key={image?._id} className={styles.imageContainer}>
+                <Image imageData={image} />
+              </div>
+            ))}
+          </Carousel>
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.textContainer}>

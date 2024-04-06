@@ -20,10 +20,48 @@
     }
 }
 
-.imageContainer {
+.carouselContainer {
     overflow: hidden;
-    aspect-ratio: 3/4;
     flex: 1;
+
+    :global(.embla__dotsAndArrows) {
+        bottom: calc(50% - 28px);
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+
+
+        @include media-down(large-mobile) {
+            display: none;
+        }
+
+        :global(.embla__dotsAndArrows__Inner) {
+            justify-content: space-between;
+            width: 100%;
+            display: flex;
+        }
+
+        :global(.embla__button) {
+            :global(svg) {
+                :global(rect) {
+                    background-color: white;
+                    stroke: var(--tangerine-500);
+                }
+
+                :global(path) {
+                    background-color: white;
+                    fill: var(--tangerine-500);
+                }
+            }
+        }
+    }
+}
+
+.imageContainer {
+    aspect-ratio: 3/4;
 }
 
 .infoContainer {
