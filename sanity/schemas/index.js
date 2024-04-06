@@ -13,6 +13,7 @@ import twoPictureSection from './sections/twoPictureSection';
 import instagramSection from './sections/instagramSection';
 
 // objects
+import accordionItem from './objects/accordionItem';
 import alignMedia from './objects/alignMedia';
 import button from './objects/button';
 import navbar from './objects/navbar';
@@ -39,6 +40,7 @@ export const schemaTypes = [
   instagramSection,
 
   // objects
+  accordionItem,
   alignMedia,
   button,
   footerLink,

@@ -7,7 +7,6 @@ export default {
   type: 'object',
   groups: defaultSectionGroups,
   icon: TbTextCaption,
-  // TODO: add icon here
   fields: [
     {
       name: `title`,

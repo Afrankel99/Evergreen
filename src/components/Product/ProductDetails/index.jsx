@@ -5,6 +5,7 @@ import Section from '../../Common/Section';
 import { useForm } from 'react-hook-form';
 import { navigate } from 'gatsby';
 import Form from '../../Common/Form';
+import AccordionInfo from './AccordionInfo';
 
 import * as styles from './styles.module.scss';
 
@@ -54,6 +55,7 @@ const ProductDetails = (props) => {
           <div className={styles.formContainer}>
             <Form className={styles.form} fields={fields} />
           </div>
+          <AccordionInfo />
         </div>
       </div>
     </Section>

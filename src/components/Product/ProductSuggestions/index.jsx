@@ -12,15 +12,13 @@ const ProductSuggestions = (props) => {
   return (
     <Section className={styles.section} sectionName="ProductSuggestions" sectionSpacing="l">
       <div className={styles.contentContainer}>
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>You may also like</h1>
+        </div>
         <div className={styles.imageContainer}>
           <Image imageData={images?.[0]}></Image>
           <Image imageData={images?.[0]}></Image>
           <Image imageData={images?.[0]}></Image>
-        </div>
-        <div className={styles.textContainer}>
-          {name && <h1 className={styles.name}>{name}</h1>}
-          {price && <span className={styles.price}>{`$${price}`}</span>}
-          {description && <p className={styles.body}>{description}</p>}
         </div>
       </div>
     </Section>

@@ -18,6 +18,15 @@ export default {
       type: `footer`,
       group: 'footer',
     },
+    {
+      name: `globalProductData`,
+      title: `Product Data`,
+      description: 'The accordion data that appears on every product page.',
+      type: 'array',
+      of: [{ type: 'accordionItem' }],
+      validation: (Rule) => Rule.required().max(3),
+      group: 'globalData',
+    },
   ],
   preview: {
     prepare() {

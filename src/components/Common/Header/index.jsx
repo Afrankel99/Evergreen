@@ -24,20 +24,6 @@ const Header = (props) => {
 
   const { width } = useWindowSize();
 
-  //   // calculate header height
-  //   useEffect(() => {
-  //     const calculateHeaderHeight = () => {
-  //       if (wrapperRef.current) {
-  //         setHeaderHeight(wrapperRef.current.clientHeight);
-  //         console.log('wrapperRef.current.clientHeight', wrapperRef.current.clientHeight);
-  //         document.documentElement.style.setProperty('--header-height', `${wrapperRef.current.clientHeight}px`);
-  //       }
-  //     };
-  //     calculateHeaderHeight();
-  //     window.addEventListener('resize', calculateHeaderHeight);
-  //     return () => window.removeEventListener('resize', calculateHeaderHeight);
-  //   }, []);
-
   // detect scroll direction
   useEffect(() => {
     const onScroll = () => {
