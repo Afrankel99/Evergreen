@@ -1,14 +1,33 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/Common/Layout';
-import Seo from '../components/seo';
+import Section from '../components/Common/Section';
+import Button from '../components/Common/Button';
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-);
+const FourOhFour = ({ location, data }) => {
+  const { settings } = data;
 
-export const Head = () => <Seo title="404: Not Found" />;
+  return (
+    <Layout location={location} settings={settings}>
+      <Section>
+        <div>
+          <h2>404 Not found</h2>
+          <Button size="xl" to="/">
+            Go back home
+          </Button>
+        </div>
+      </Section>
+    </Layout>
+  );
+};
 
-export default NotFoundPage;
+export default FourOhFour;
+
+export const query = graphql`
+  query FourOhFourPage {
+    settings: sanitySettings {
+      ...NavbarFragment
+      ...FooterFragment
+    }
+  }
+`;
