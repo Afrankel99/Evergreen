@@ -22,7 +22,7 @@ const ProductCarouselSection = (props) => {
         <Image imageData={product?.images?.[0]}></Image>
       </Link>
       <div className={styles.infoContainer}>
-        <div className={styles.titleAndArrow}>
+        <div className={styles.nameAndArrow}>
           <Link className={styles.name} to={product?.slug?.current}>
             {product?.name}
           </Link>

@@ -17,7 +17,7 @@ export default {
     {
       name: `content`,
       title: `Content`,
-      type: 'text',
+      type: 'richText',
       group: 'data',
     },
     {

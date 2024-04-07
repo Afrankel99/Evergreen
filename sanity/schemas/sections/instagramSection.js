@@ -45,10 +45,7 @@ export default {
     },
   ],
   preview: {
-    select: {
-      title: 'title',
-    },
-    prepare(selection) {
+    prepare() {
       return {
         title: `Instagram Section`,
       };

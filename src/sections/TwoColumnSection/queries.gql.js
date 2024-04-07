@@ -5,7 +5,7 @@ export const TwoColumnSectionFragment = graphql`
     _key
     _type
     title
-    content
+    _rawContent
     addButton
     button {
       ...ButtonFragment
