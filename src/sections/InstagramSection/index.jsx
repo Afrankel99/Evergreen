@@ -22,9 +22,13 @@ const InstagramSection = (props) => {
         </Link>
         <div className={styles.images}>
           {images?.map((image) => (
-            <div key={image?._key} className={styles.imageContainer}>
+            <Link
+              key={image?._key}
+              className={styles.imageContainer}
+              to="https://www.instagram.com/evergreen_flowerstudio/"
+            >
               <Image imageData={image} />
-            </div>
+            </Link>
           ))}
         </div>
       </div>
