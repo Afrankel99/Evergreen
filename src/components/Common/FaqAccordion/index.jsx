@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useEffect, useRef, useState } from 'react';
-import Button from '../Button';
 import classNames from 'classnames';
+import Button from '../Button';
+import RichText from '../RichText';
 
 import * as styles from './styles.module.scss';
 
@@ -64,7 +65,7 @@ const FaqAccordion = (props) => {
         )}
       </div>
       <div className={styles.infoContainer} ref={ref}>
-        {faq?.info && <p className={styles.body}>{faq.info}</p>}
+        {faq?._rawInfo && <RichText className={styles.body} blocks={faq?._rawInfo} />}
         {faq?.addButton && (
           <Button title={faq?.button?.title ?? 'Learn more'} to={faq?.button?.link} className={styles.button} />
         )}

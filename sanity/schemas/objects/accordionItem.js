@@ -11,7 +11,7 @@ export default {
     {
       name: 'info',
       title: 'Info',
-      type: 'text',
+      type: 'richText',
     },
     {
       name: 'addButton',

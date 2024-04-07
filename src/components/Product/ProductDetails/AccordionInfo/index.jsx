@@ -9,7 +9,7 @@ const AccordionInfo = () => {
         nodes {
           globalProductData {
             title
-            info
+            _rawInfo
             addButton
             button {
               ...ButtonFragment
