@@ -1,13 +1,7 @@
-.section {
-    background-color: var(--cream-100);
-}
-
 .contentContainer {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 54px;
-    justify-content: center;
-    flex-direction: row-reverse;
 
     @include media-down(tablet) {
         flex-direction: column;
@@ -42,7 +36,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    max-width: 360px;
 }
 
 .title {
@@ -69,13 +62,16 @@
 }
 
 .imageContainer {
-    aspect-ratio: 3/4;
-    max-width: 360px;
+    display: flex;
+    flex-direction: column;
 }
 
-.firstImage {
-
+.firstImage, .secondImage {
+    aspect-ratio: 3/4;
+    width: 60%;
 }
 
 .secondImage {
+    margin-top: -50%;
+    left: 35%;
 }
