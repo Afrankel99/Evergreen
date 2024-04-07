@@ -20,6 +20,7 @@ import navbar from './objects/navbar';
 import customSlug from './objects/customSlug';
 import customImage from './objects/customImage';
 import link from './objects/link';
+import richText from './objects/richText';
 import spacingOptions from './objects/spacingOptions';
 import footerLink from './objects/footerLink';
 import footer from './objects/footer';
@@ -50,4 +51,5 @@ export const schemaTypes = [
   customSlug,
   spacingOptions,
   link,
+  richText,
 ];

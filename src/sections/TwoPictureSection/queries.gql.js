@@ -5,7 +5,7 @@ export const TwoPictureSectionFragment = graphql`
     _key
     _type
     title
-    content
+    _rawContent
     addButton
     button {
       ...ButtonFragment

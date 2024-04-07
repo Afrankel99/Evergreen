@@ -1,0 +1,13 @@
+.heading {
+    @include displayXs;
+    font-weight: $font-weight-medium;
+}
+
+.subheading {
+    @include textLg;
+}
+
+ol,
+ul {
+    padding-left: 32px;
+}

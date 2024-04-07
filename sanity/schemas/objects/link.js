@@ -13,7 +13,6 @@ export default {
           { value: 'external', title: 'External' },
           { value: 'phone', title: 'Phone' },
           { value: 'email', title: 'Email' },
-          //   { value: 'action', title: 'Action' },
         ],
         layout: 'radio',
         direction: 'horizontal',
