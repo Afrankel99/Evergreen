@@ -56,11 +56,6 @@
     display: flex;
     justify-content: center;
 
-    :global(.embla) {
-        max-width: 1150px;
-        justify-content: center;
-    }
-
     :global(.embla__slide) {
         --gap: 16px;
         --width: 33%;
@@ -84,32 +79,14 @@
     :global(.embla__dotsAndArrows) {
         bottom: calc(50% - 28px);
         position: absolute;
+        padding: 0 24px;
         width: 100%;
         z-index: 3;
         justify-content: space-between;
-        width: 100%;
         display: flex;
 
         @include media-down(large-mobile) {
             display: none;
-        }
-
-        :global(.embla__dotsAndArrows__Inner) {
-            justify-content: space-between;
-            width: 100%;
-            display: flex;
-        }
-
-        :global(.embla__button) {
-            :global(svg) {
-                :global(rect) {
-                    stroke: black;
-                }
-
-                :global(path) {
-                    fill: black;
-                }
-            }
         }
     }
 }

@@ -18,9 +18,9 @@ const ProductCarouselSection = (props) => {
   // helper function to render each product (takes in the product var and then returns the JSX for the product card)
   const renderProduct = (product) => (
     <div key={product?._key} className={styles.product}>
-      <div className={styles.imageWrapper}>
+      <Link to={product?.slug?.current} className={styles.imageWrapper}>
         <Image imageData={product?.images?.[0]}></Image>
-      </div>
+      </Link>
       <div className={styles.infoContainer}>
         <div className={styles.titleAndArrow}>
           <Link className={styles.name} to={product?.slug?.current}>
@@ -48,7 +48,7 @@ const ProductCarouselSection = (props) => {
             />
           ))}
         </div>
-        <Carousel addArrows options={{ loop: true }} className={styles.carousel}>
+        <Carousel addArrows className={styles.carousel}>
           {activeCategory?.products?.map((product) => renderProduct(product))}
         </Carousel>
       </div>
