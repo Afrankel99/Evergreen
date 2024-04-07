@@ -8,7 +8,7 @@ import * as styles from './styles.module.scss';
 
 const TwoPictureSection = (props) => {
   const { data } = props;
-  const { title, _rawContent, button, imageOne, imageTwo, spacingOptions } = data;
+  const { title, _rawContent, addButton, button, imageOne, imageTwo, spacingOptions } = data;
 
   return (
     <Section sectionName="TwoPictureSection" {...spacingOptions}>
@@ -18,9 +18,9 @@ const TwoPictureSection = (props) => {
           <Image className={styles.secondImage} imageData={imageTwo} />
         </div>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>{title}</h1>
-          <RichText className={styles.content} blocks={_rawContent} />
-          <Button className={styles.button} title={button.title} to={button.link} />
+          {title && <h1 className={styles.title}>{title}</h1>}
+          {_rawContent && <RichText className={styles.content} blocks={_rawContent} />}
+          {addButton && <Button className={styles.button} title={button?.title} to={button?.link} />}
         </div>
       </div>
     </Section>

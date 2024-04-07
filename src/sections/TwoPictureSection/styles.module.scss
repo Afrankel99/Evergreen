@@ -1,7 +1,7 @@
 .contentContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 54px;
+    gap: 64px;
 
     @include media-down(tablet) {
         flex-direction: column;

@@ -15,13 +15,15 @@
 }
 
 .categoryButton {
+    @include displayLg;
+    font-weight: $font-weight-regular;
     border: none;
     background-color: transparent;
-    color: rgb(142, 142, 142);
-    font-size: 24px;
+    color: #AEAEAE;
 
     &.active {
-        color: black;
+        color: var(--sacramento-500);
+        font-weight: $font-weight-bold;
     }
 }
 
@@ -49,7 +51,13 @@
 }
 
 .name {
-    font-size: 18px;
+    @include textLg;
+}
+
+.arrow {
+    path {
+        fill: var(--tangerine-500);
+    }
 }
 
 .carousel {
