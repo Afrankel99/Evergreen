@@ -60,6 +60,7 @@ export const query = graphql`
         ...BannerSectionFragment
         ...HeadingSectionFragment
         ...ProductCarouselSectionFragment
+        ...ProductFeedSectionFragment
         ...ThreePictureSectionFragment
         ...TwoColumnSectionFragment
         ...TwoPictureSectionFragment

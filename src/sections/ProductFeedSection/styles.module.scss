@@ -1,0 +1,50 @@
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include media-down(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-down(large-mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.imageWrapper {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+.nameAndArrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoContainer {
+    @include textLg;
+    color: var(--frg-headings);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.arrow {
+    path {
+        fill: var(--tangerine-500);
+    }
+}

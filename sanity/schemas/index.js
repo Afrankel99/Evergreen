@@ -8,6 +8,7 @@ import settings from './documents/settings';
 import bannerSection from './sections/bannerSection';
 import headingSection from './sections/headingSection';
 import productCarouselSection from './sections/productCarouselSection';
+import productFeedSection from './sections/productFeedSection';
 import threePictureSection from './sections/threePictureSection';
 import twoColumnSection from './sections/twoColumnSection';
 import twoPictureSection from './sections/twoPictureSection';
@@ -38,6 +39,7 @@ export const schemaTypes = [
   twoColumnSection,
   twoPictureSection,
   threePictureSection,
+  productFeedSection,
   bannerSection,
   productCarouselSection,
   instagramSection,

@@ -40,6 +40,7 @@ export default {
         { type: 'bannerSection' },
         { type: 'headingSection' },
         { type: 'productCarouselSection' },
+        { type: 'productFeedSection' },
         { type: 'threePictureSection' },
         { type: 'twoColumnSection' },
         { type: 'twoPictureSection' },
