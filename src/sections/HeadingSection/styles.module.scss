@@ -1,0 +1,21 @@
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    @include displayXl;
+    color: var(--frg-headings);
+    font-weight: $font-weight-medium;
+    text-wrap: balance;
+    margin-bottom: 12px;
+}
+
+.body {
+    @include textXl;
+
+    @include media-down(tablet) {
+        margin-top: 4px;
+    }
+}

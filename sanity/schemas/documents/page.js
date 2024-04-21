@@ -38,6 +38,7 @@ export default {
       of: [
         // note: these need to be in alphabetical order
         { type: 'bannerSection' },
+        { type: 'headingSection' },
         { type: 'productCarouselSection' },
         { type: 'threePictureSection' },
         { type: 'twoColumnSection' },

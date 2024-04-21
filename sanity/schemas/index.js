@@ -6,6 +6,7 @@ import settings from './documents/settings';
 
 // sections
 import bannerSection from './sections/bannerSection';
+import headingSection from './sections/headingSection';
 import productCarouselSection from './sections/productCarouselSection';
 import threePictureSection from './sections/threePictureSection';
 import twoColumnSection from './sections/twoColumnSection';
@@ -33,6 +34,7 @@ export const schemaTypes = [
   settings,
 
   // sections
+  headingSection,
   twoColumnSection,
   twoPictureSection,
   threePictureSection,

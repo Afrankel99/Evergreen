@@ -1,7 +1,6 @@
 .footer {
   padding: 20px 0;
-  background-color: var(--pine-500);
-  color: var(--cream-100);
+  color: var(--frg-headings);
 }
 
 .container {
@@ -57,4 +56,5 @@
 
 .copyright {
     @include textSm;
+    color: var(--frg-headings);
 }

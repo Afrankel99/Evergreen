@@ -13,7 +13,13 @@ const Footer = (props) => {
   const [activeMobileMenu, setActiveMobileMenu] = useState(null);
 
   return (
-    <Section as="footer" className={styles.footer} containerClassName={styles.container} sectionSpacing="l">
+    <Section
+      data-theme="pine"
+      as="footer"
+      className={styles.footer}
+      containerClassName={styles.container}
+      sectionSpacing="l"
+    >
       <div className={styles.leftPane}>
         <div className={styles.logo}>
           <Link to="/" ariaLabel="Evergreen">
