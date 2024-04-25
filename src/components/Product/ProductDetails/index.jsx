@@ -60,7 +60,7 @@ const ProductDetails = (props) => {
             {description && <p className={styles.body}>{description}</p>}
           </div>
           <div className={styles.formContainer}>
-            <Form className={styles.form} fields={fields} />
+            <Form className={styles.form} fields={fields} name="Product Page Form" />
           </div>
           <AccordionInfo />
         </div>
