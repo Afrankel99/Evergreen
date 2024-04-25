@@ -26,6 +26,21 @@ module.exports = {
     DETECT_NODE_MUTATIONS: false,
     PARALLEL_SOURCING: true,
   },
+
+  headers: [
+    {
+      source: `*`,
+      headers: [
+        {
+          key: 'referrer-policy',
+          value: 'no-referrer',
+        },
+        { key: 'x-xss-protection', value: '1; mode=block' },
+        { key: 'x-content-type-options', value: 'nosniff' },
+      ],
+    },
+  ],
+
   plugins: [
     {
       resolve: `gatsby-source-sanity`,
