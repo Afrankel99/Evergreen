@@ -2,8 +2,6 @@
 import React from 'react';
 import Image from '../../Common/Image';
 import Section from '../../Common/Section';
-import { useForm } from 'react-hook-form';
-import { navigate } from 'gatsby';
 import Form from '../../Common/Form';
 import Carousel from '../../Common/Carousel';
 import AccordionInfo from './AccordionInfo';
@@ -13,14 +11,6 @@ import * as styles from './styles.module.scss';
 const ProductDetails = (props) => {
   const { data } = props;
   const { name, description, images, price } = data;
-  const { register, handleSubmit } = useForm();
-
-  const onSubmit = (data) => {
-    // Navigate to the contact page and pass form data as state
-    navigate('/contact', {
-      state: data, // Pass form data as state
-    });
-  };
 
   const fields = [
     {
