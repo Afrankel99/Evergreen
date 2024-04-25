@@ -1,65 +1,98 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import './styles.scss';
+import TextArea from './Fields/TextArea';
+import Select from './Fields/Select';
+import RadioCheckbox from './Fields/RadioCheckbox';
+import TextInput from './Fields/TextInput';
+import StaticText from './Fields/StaticText';
+import classNames from 'classnames';
 
-const FormField = ({ name, type, options, placeholder, defaultValue, handleChange, register, validation }) => {
+import * as styles from './styles.module.scss';
+
+const FormField = (props) => {
+  const {
+    name,
+    type,
+    content,
+    options,
+    placeholder,
+    defaultValue,
+    handleChange,
+    register,
+    validation,
+    variant,
+    size = 'm',
+  } = props;
+
   if (type === 'textarea') {
     return (
-      <textarea
-        {...register(name, validation)}
+      <TextArea
+        className={classNames(styles.field, styles[size || 'm'])}
+        register={register}
         name={name}
-        id={name}
+        validation={validation}
         placeholder={placeholder}
         defaultValue={defaultValue}
+        size={size}
+        handleChange={handleChange}
       />
     );
   }
   if (type === 'select') {
     return (
-      <select name={name} {...register(name, validation)}>
-        {options.map((option) => (
-          <option value={option} defaultValue={defaultValue} key={option}>
-            {option}
-          </option>
-        ))}
-      </select>
+      <Select
+        className={classNames(styles.field, styles[size || 'm'])}
+        name={name}
+        register={register}
+        validation={validation}
+        options={options}
+        defaultValue={defaultValue}
+        size={size}
+        handleChange={handleChange}
+        placeholder={placeholder}
+      />
     );
-  }
-
-  if (type === 'date') {
-    return <input {...register(name, validation)} type={type} name={name} />;
   }
 
   if (type === 'radio' || type === 'checkbox') {
     return (
-      <div className={`${type}-buttons`}>
-        {options.map((option) => (
-          <div key={option} className={`${type}-button`}>
-            <input
-              {...register(name, validation)}
-              type={type}
-              id={option}
-              name={name}
-              value={option}
-              defaultValue={defaultValue}
-              onChange={handleChange}
-            />
-
-            <label className="label" htmlFor={option}>
-              {option}
-            </label>
-          </div>
-        ))}
-      </div>
+      <RadioCheckbox
+        className={classNames(styles.field, styles[size || 'm'])}
+        type={type}
+        options={options}
+        register={register}
+        name={name}
+        validation={validation}
+        defaultValue={defaultValue}
+        handleChange={handleChange}
+        size={size}
+      />
     );
   }
+
+  if (type === 'staticText') {
+    return (
+      <StaticText
+        className={classNames(styles.field, styles[size || 'm'])}
+        name={name}
+        content={content}
+        variant={variant}
+      />
+    );
+  }
+
   return (
-    <input
-      {...register(name, validation)}
+    <TextInput
+      className={classNames(styles.field, styles[size || 'm'])}
+      register={register}
       type={type}
       name={name}
       id={name}
       placeholder={placeholder}
       defaultValue={defaultValue}
+      size={size}
+      handleChange={handleChange}
+      validation={validation}
     />
   );
 };

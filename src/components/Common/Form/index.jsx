@@ -97,10 +97,10 @@ const Form = (props) => {
               <div className={`${styles.fieldError} ${hasError ? 'active' : 'inactive'}`}>
                 {hasError && <span>{field.validationMessage || 'This field is required'}</span>}
               </div>
-              {showSuccess && <p className={styles.successMessage}>Thank you for your submission!</p>}
             </div>
           );
         })}
+        {showSuccess && <p className={styles.successMessage}>Thank you for your submission!</p>}
         <Button type="submit" className={styles.formButton} disabled={isSubmitting} title="Submit Form" hideArrow>
           {isSubmitting ? 'Submitting' : 'Submit'}
         </Button>

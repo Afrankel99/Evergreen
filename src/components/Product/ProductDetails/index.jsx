@@ -17,7 +17,7 @@ const ProductDetails = (props) => {
       type: 'select',
       name: 'size',
       label: 'Size',
-      defaultValue: '',
+      defaultValue: 'Extra Small',
       validation: { required: true },
       validationMessage: 'Please enter your desired size',
       options: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],

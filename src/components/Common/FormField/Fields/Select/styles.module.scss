@@ -1,0 +1,29 @@
+.select {
+  display: flex;
+  position: relative;
+
+  &.s {
+    .chevron {
+      right: 14px;
+    }
+  }
+
+  &.m {
+
+    .chevron {
+      right: 14px;
+    }
+  }
+
+  &.l {
+    .chevron {
+      right: 16px;
+    }
+  }
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}

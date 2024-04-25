@@ -1,0 +1,9 @@
+.heading { 
+  @include textXl();
+  font-weight: 500;
+}
+
+.body { 
+  @include textMd();
+  font-weight: 400;
+}

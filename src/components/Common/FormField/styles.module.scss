@@ -1,0 +1,79 @@
+.input {
+    // @include body-font();
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    color: black;
+    width: 100%;
+    background: white;
+    border: 1px solid black;
+    box-shadow: none;
+    border-radius: 0px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  
+    &:placeholder {
+      color: rgba(67, 57, 52, 0.50);
+    }
+  
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+  
+      &:hover,
+      &:focus,
+      &:active {
+        -webkit-box-shadow: 0 0 0 30px white inset;
+      }
+    }
+  
+    &[disabled] {
+      border-color: lighten(white, 5%);
+      background-color: darken(white, 5%);
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+  
+    &:focus {
+      border: 1px solid black;
+    }
+  }
+  
+  input,
+  select,
+  textarea {
+    &.field {
+      @extend .input;
+  
+      &.s {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+  
+      &.m {
+        padding: 12px 14px;
+        font-size: 16px;
+      }
+  
+      &.l {
+        padding: 14px 16px;
+        font-size: 16px;
+      }
+    }
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  textarea { 
+    height: 153px;
+    width: 100%;
+  }
