@@ -14,7 +14,7 @@ const ProductFeedSection = (props) => {
 
   const productFeedData = useStaticQuery(graphql`
     query ProductFeedQuery {
-      allSanityProduct {
+      allSanityProduct(sort: { _updatedAt: DESC }) {
         nodes {
           name
           price
