@@ -56,11 +56,11 @@ const Form = (props) => {
       <form
         method="POST"
         data-netlify="true"
-        netlify-honeypot="_gotcha"
         onSubmit={handleSubmit(onSubmit)}
         name={name}
         className={classNames(styles.form, className || '')}
       >
+        <input type="hidden" name="form-name" value={name} />
         <button type="submit" disabled aria-hidden="true" style={{ display: 'none' }} />
         {fields?.map((field) => {
           const hasError = errors[field.name];
