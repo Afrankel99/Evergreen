@@ -24,29 +24,18 @@ const Form = (props) => {
   if (!fields) return null;
 
   const onSubmit = async (data) => {
-    const formValues = {
-      'form-name': name,
-      ...data,
-    };
+    const formData = new FormData();
 
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
-
-    const body = new URLSearchParams();
-
-    for (const key in formValues) {
-      body.append(key, formValues[key]);
+    for (const key in data) {
+      formData.append(key, data[key]);
     }
 
-    const requestOptions = {
-      method: 'POST',
-      headers,
-      body,
-      redirect: 'follow',
-    };
-
     try {
-      const response = await fetch('/', requestOptions);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
 
       if (response.ok) {
         reset();
