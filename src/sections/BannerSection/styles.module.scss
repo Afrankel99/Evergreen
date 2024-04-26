@@ -1,6 +1,6 @@
 .section {
-    height: 100vh; // Fallback
-    height: 100svh;
+    height: calc(100vh - var(--header-height)); // Fallback
+    height: calc(100svh - var(--header-height));
     align-items: center;
     display: flex;
 

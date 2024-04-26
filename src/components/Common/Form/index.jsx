@@ -100,9 +100,13 @@ const Form = (props) => {
             </div>
           );
         })}
-        {showSuccess && <p className={styles.successMessage}>Thank you for your submission!</p>}
+        {showSuccess && (
+          <p className={styles.successMessage}>
+            Thank you for your order! We will contact you within 3 days to proceed with next steps.
+          </p>
+        )}
         <Button type="submit" className={styles.formButton} disabled={isSubmitting} title="Submit Form" hideArrow>
-          {isSubmitting ? 'Submitting' : 'Submit'}
+          {isSubmitting ? 'Submitting' : 'Submit Order'}
         </Button>
       </form>
     </div>
