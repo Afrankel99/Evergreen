@@ -9,10 +9,10 @@ import * as styles from './styles.module.scss';
 
 const TwoColumnSection = (props) => {
   const { data } = props;
-  const { title, _rawContent, button, image, addButton, alignMedia, spacingOptions } = data;
+  const { title, _rawContent, button, image, addButton, alignMedia, theme, spacingOptions } = data;
 
   return (
-    <Section className={styles.section} sectionName="TwoColumnSection" {...spacingOptions}>
+    <Section className={styles.section} sectionName="TwoColumnSection" data-theme={theme} {...spacingOptions}>
       <div className={classNames(styles.contentContainer, styles[alignMedia])}>
         <div className={styles.textContainer}>
           {title && <h1 className={styles.title}>{title}</h1>}

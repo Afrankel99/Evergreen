@@ -1,5 +1,5 @@
 .section {
-    background-color: var(--cream-100);
+    background-color: var(--bkg-default);
 }
 
 .contentContainer {
@@ -42,6 +42,7 @@
     align-items: flex-start;
     flex: 1;
     gap: 8px;
+    color: var(--frg-headings);
 }
 
 .imageContainer {
@@ -60,6 +61,7 @@
 
 .body {
     @include textMd;
+    color: var(--frg-headings);
     font-size: 18px;
 
     @include media-down(tablet) {

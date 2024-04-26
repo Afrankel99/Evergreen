@@ -1,16 +1,15 @@
 .button {
     position: relative;
-    // border-radius: 10px;
     padding: 14px 20px;
     display: inline-flex;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
-    background-color: var(--tangerine-500);
-    color: var(--base-white);
+    background-color: var(--button-bg);
+    color: var(--button-color);
     text-decoration: none !important;
     transition: all 0.3s ease-in-out;
-    border: 2px solid var(--tangerine-500);
+    border: 2px solid var(--button-border);
 
     .arrow {
         margin-left: 0;
@@ -28,11 +27,8 @@
             fill: var(--button-color-hover);
         }
 
-        color: var(--tangerine-500);
-        background-color: var(--base-white);
+        color: var(--button-color-hover);
+        background-color: var(--button-bg-hover);
         transition: all 0.3s ease-in-out;
-        // border: 1px solid var(--button-border-hover);
-        // background-color: var(--button-bg-hover);
-        // color: var(--button-color-hover);
     }
 }

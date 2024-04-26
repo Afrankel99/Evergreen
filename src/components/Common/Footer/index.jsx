@@ -14,11 +14,11 @@ const Footer = (props) => {
 
   return (
     <Section
-      data-theme="pine"
       as="footer"
       className={styles.footer}
       containerClassName={styles.container}
       sectionSpacing="l"
+      data-theme="dark"
     >
       <div className={styles.leftPane}>
         <div className={styles.logo}>

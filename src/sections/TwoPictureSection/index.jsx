@@ -8,10 +8,10 @@ import * as styles from './styles.module.scss';
 
 const TwoPictureSection = (props) => {
   const { data } = props;
-  const { title, _rawContent, addButton, button, imageOne, imageTwo, spacingOptions } = data;
+  const { title, _rawContent, addButton, button, imageOne, imageTwo, theme, spacingOptions } = data;
 
   return (
-    <Section sectionName="TwoPictureSection" {...spacingOptions}>
+    <Section sectionName="TwoPictureSection" data-theme={theme} {...spacingOptions}>
       <div className={styles.contentContainer}>
         <div className={styles.imageContainer}>
           <Image className={styles.firstImage} imageData={imageOne} />

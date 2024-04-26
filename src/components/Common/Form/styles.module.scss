@@ -23,7 +23,7 @@
 }
 
 .asterix {
-    color: var(--tangerine-500);
+    color: red;
 }
 
 .splitLeft {
@@ -40,8 +40,9 @@
 
 .label {
     @include textLg;
+    color: var(--frg-headings);
 }
 
 .fieldError {
-    color: var(--tangerine-500);
+    color: red;
 }

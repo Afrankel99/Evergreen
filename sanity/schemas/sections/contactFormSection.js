@@ -20,13 +20,13 @@ export default {
       type: 'string',
       options: {
         list: [
-          { value: 'white', title: 'White' },
-          { value: 'black', title: 'Black' },
+          { value: 'light', title: 'Light' },
+          { value: 'dark', title: 'Dark' },
         ],
         layout: 'radio',
         direction: 'horizontal',
       },
-      initialValue: 'white',
+      initialValue: 'light',
       group: 'styles',
     },
     {

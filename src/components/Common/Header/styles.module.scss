@@ -10,25 +10,15 @@
     width: 100%;
     z-index: 4;
     transition: all 0.45s ease;
-    background-color: var(--cream-100);
+    background-color: var(--bkg-default);
 
     @include media-down(large-tablet) {
         padding: 24px;
-        background-color: var(--sacramento-500);
     }
 
     &.hidden {
         transform: translateY(-100%);
         transition: transform 0.45s ease;
-    }
-
-    &.transparent {
-        // if we want to make it transparent on home
-        transition: all 0.45s ease;
-
-        &.top {
-            background-color: transparent !important;
-        }
     }
 }
 
@@ -69,6 +59,7 @@
     @include textMd;
     text-transform: uppercase;
     font-weight: $font-weight-medium;    
+    color: var(--frg-headings);
 
     &.activeLink {
         .navLink {}

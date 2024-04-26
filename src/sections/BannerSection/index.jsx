@@ -14,7 +14,7 @@ const BannerSection = (props) => {
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <div className={styles.text}>
-            {title && <h1 className={styles.title}>{title}</h1>}
+            {/* {title && <h1 className={styles.title}>{title}</h1>} */}
             {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
           </div>
         </div>

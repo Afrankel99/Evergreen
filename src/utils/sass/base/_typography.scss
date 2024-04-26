@@ -18,13 +18,11 @@ $font-weight-bold: 700;
 @mixin heading-font() {
   font-family: 'Palatino Linotype';
   font-weight: $font-weight-bold;
-  color: var(--pine-500);
 }
 
 @mixin body-font() {
   font-family: 'Montserrat';
   font-weight: $font-weight-regular;
-  color: var(--sacramento-500);
   line-height: 120%;
 }
 

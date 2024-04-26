@@ -46,13 +46,13 @@ const ContactFormSection = (props) => {
   ];
 
   return (
-    <Section sectionName="ContactFormSection" {...spacingOptions} data-theme={theme}>
+    <Section sectionName="ContactFormSection" {...spacingOptions}>
       <div className={styles.contactFormContainer}>
         <div className={styles.contactImg}>
           <Image imageData={image} />
         </div>
         <div data-theme="sand" className={styles.contactForm}>
-          <div className={styles.formWrapper}>
+          <div className={styles.formWrapper} data-theme={theme}>
             <Form fields={fields} className={styles.form} name="Contact Form" />
           </div>
         </div>

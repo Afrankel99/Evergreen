@@ -7,10 +7,10 @@ import * as styles from './styles.module.scss';
 
 const InstagramSection = (props) => {
   const { data } = props;
-  const { title, images, spacingOptions } = data;
+  const { title, images, theme, spacingOptions } = data;
 
   return (
-    <Section sectionName="InstagramSection" {...spacingOptions}>
+    <Section sectionName="InstagramSection" data-theme={theme} {...spacingOptions}>
       <div className={styles.contentContainer}>
         <Link
           className={styles.titleLink}
