@@ -12,7 +12,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .field {
@@ -45,4 +45,5 @@
 
 .fieldError {
     color: red;
+    margin-bottom: -8px;
 }

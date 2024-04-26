@@ -3,7 +3,7 @@
     --base-white: #ffffff;
     --cream-500: #FEFBF7;
     --midnight-500: #0C1924;
-
+    --fruity-500: #CA2E55;
 }
 
 [data-theme="light"] {
@@ -12,12 +12,12 @@
     --frg-body: var(--midnight-500);
 
     // Button
-    --button-bg: var(--midnight-500);
-    --button-color: var(--cream-500);
+    --button-bg: var(--cream-500);
+    --button-color: var(--midnight-500);
     --button-border: var(--midnight-500);
     // Button Hover
-    --button-bg-hover: var(--cream-500);
-    --button-color-hover: var(--midnight-500);
+    --button-bg-hover: var(--midnight-500);
+    --button-color-hover: var(--cream-500);
     --button-border-hover: var(--midnight-500);
 }
 
@@ -27,11 +27,11 @@
     --frg-body: var(--cream-500);
 
     // Button
-    --button-bg: var(--cream-500);
-    --button-color: var(--midnight-500);
-    --button-border: var(--cream-500);
+    --button-bg: var(--fruity-500);
+    --button-color: var(--cream-500);
+    --button-border: var(--fruity-500);
     // Button Hover
     --button-bg-hover: var(--midnight-500);
     --button-color-hover: var(--cream-500);
-    --button-border-hover: var(--cream-500);
+    --button-border-hover: var(--fruity-500);
 }

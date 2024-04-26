@@ -19,15 +19,6 @@ const ContactFormSection = (props) => {
       validationMessage: 'Please enter your name',
     },
     {
-      type: 'email',
-      name: 'email',
-      placeholder: 'example@mail.com',
-      label: 'Email',
-      defaultValue: '',
-      validation: { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i },
-      validationMessage: 'Please enter a valid email',
-    },
-    {
       type: 'tel',
       name: 'phoneNumber',
       placeholder: '04XX XXX XXX',
@@ -35,6 +26,15 @@ const ContactFormSection = (props) => {
       defaultValue: '',
       validation: { required: true, minLength: 8 },
       validationMessage: 'Please enter a valid number',
+    },
+    {
+      type: 'email',
+      name: 'email',
+      placeholder: 'example@mail.com',
+      label: 'Email',
+      defaultValue: '',
+      validation: { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i },
+      validationMessage: 'Please enter a valid email',
     },
     {
       type: 'textarea',

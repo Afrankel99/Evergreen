@@ -88,6 +88,9 @@ const Form = (props) => {
                   {field.validation?.required && <span className={styles.asterix}>*</span>}
                 </span>
               )}
+              <div className={`${styles.fieldError} ${hasError ? 'active' : 'inactive'}`}>
+                {hasError && <span>{field.validationMessage || 'This field is required'}</span>}
+              </div>
               <FormField {...field} register={register} />
               <input
                 {...register('_gotcha')}
@@ -97,9 +100,6 @@ const Form = (props) => {
                 tabIndex="-1"
                 autoComplete="off"
               />
-              <div className={`${styles.fieldError} ${hasError ? 'active' : 'inactive'}`}>
-                {hasError && <span>{field.validationMessage || 'This field is required'}</span>}
-              </div>
             </div>
           );
         })}
