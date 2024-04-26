@@ -33,15 +33,14 @@ const ProductDetails = (props) => {
       type: 'text',
       name: 'name',
       placeholder: 'Your name',
-      label: 'Name',
+      label: 'Your details',
       validation: { required: true },
       validationMessage: 'Please enter your name',
     },
     {
       type: 'email',
       name: 'email',
-      placeholder: 'email@company.com.au',
-      label: 'Email',
+      placeholder: 'example@mail.com',
       defaultValue: '',
       validation: { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i },
       validationMessage: 'Please enter a valid email',
@@ -49,8 +48,7 @@ const ProductDetails = (props) => {
     {
       type: 'tel',
       name: 'phoneNumber',
-      placeholder: '04XX XXX XXX',
-      label: 'Phone number',
+      placeholder: 'Phone number',
       defaultValue: '',
       validation: { required: true, minLength: 8 },
       validationMessage: 'Please enter a valid number',
@@ -58,8 +56,8 @@ const ProductDetails = (props) => {
     {
       type: 'textarea',
       name: 'wish',
-      placeholder: 'Your wish',
-      label: 'Your wish',
+      label: 'Additional comments*',
+      placeholder: `*Please let us know here if you have ordered multiple bouquets.`,
       defaultValue: '',
     },
   ];
