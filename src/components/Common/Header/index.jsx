@@ -90,7 +90,7 @@ const Header = (props) => {
         topOfPage && styles.top,
         scrollDirection === 'down' && scrolledPastThreshold ? styles.hidden : null
       )}
-      data-theme="light"
+      data-theme="dark"
     >
       <div className={styles.contentContainer}>
         <div className={classNames(styles.navContainer, hamburgerMenuActive && styles.hamburgerActive)}>
@@ -116,7 +116,7 @@ const Header = (props) => {
               ))}
             </ul>
           </nav>
-          <div className={styles.contactNav} ref={loginRef}>
+          <div className={styles.contactNav} data-theme="light" ref={loginRef}>
             <Button title={button?.title} to={button?.link} />
           </div>
           <button

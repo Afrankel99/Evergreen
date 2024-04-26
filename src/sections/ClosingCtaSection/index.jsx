@@ -1,7 +1,9 @@
 import React from 'react';
+import classNames from 'classnames';
 import Section from '~components/Common/Section';
 import RichText from '../../components/Common/RichText';
 import Button from '../../components/Common/Button';
+import leafImage from '../../images/leaf.png';
 
 import * as styles from './styles.module.scss';
 
@@ -10,12 +12,14 @@ const ClosingCtaSection = (props) => {
   const { title, _rawContent, addButton, button } = data;
 
   return (
-    <Section data-theme="light" sectionName="ClosingCtaSection" sectionSpacing="l">
+    <Section data-theme="light" className={styles.section} sectionName="ClosingCtaSection" sectionSpacing="l">
+      <img src={leafImage} className={classNames(styles.leaf, styles.left)} />
       <div className={styles.textContainer}>
         {title && <h1 className={styles.title}>{title}</h1>}
         {_rawContent && <RichText className={styles.body} blocks={_rawContent} />}
         {addButton && <Button className={styles.button} title={button.title} to={button.link} />}
       </div>
+      <img src={leafImage} className={classNames(styles.leaf, styles.right)} />
     </Section>
   );
 };

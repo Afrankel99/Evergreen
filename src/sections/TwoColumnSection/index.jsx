@@ -20,7 +20,7 @@ const TwoColumnSection = (props) => {
           {addButton && <Button className={styles.button} title={button.title} to={button.link} />}
         </div>
         <div className={styles.imageContainer}>
-          <Image imageData={image}></Image>
+          <Image imageData={image} />
         </div>
       </div>
     </Section>

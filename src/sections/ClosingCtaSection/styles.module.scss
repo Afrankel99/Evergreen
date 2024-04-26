@@ -1,3 +1,8 @@
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
 .textContainer {
     display: flex;
     flex-direction: column;
@@ -25,4 +30,15 @@
 
 .button {
     margin-top: 16px;
+}
+
+.leaf {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    max-height: 460px;
+
+    &.left {
+        left: 0;
+    }
 }
