@@ -5,7 +5,7 @@
 .contentContainer {
     display: flex;
     align-items: center;
-    gap: 64px;
+    gap: 80px;
     justify-content: center;
 
     @include media-down(tablet) {
@@ -52,7 +52,7 @@
 }
 
 .title {
-    @include displaySm;
+    @include displayLg;
     color: var(--frg-headings);
     font-weight: $font-weight-medium;
     text-wrap: balance;
@@ -60,9 +60,8 @@
 }
 
 .body {
-    @include textMd;
+    @include textLg;
     color: var(--frg-headings);
-    font-size: 18px;
 
     @include media-down(tablet) {
         margin-top: 4px;

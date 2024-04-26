@@ -35,3 +35,18 @@
     --button-color-hover: var(--cream-500);
     --button-border-hover: var(--fruity-500);
 }
+
+[data-theme="gradient"] {
+    --bkg-default: linear-gradient(180deg, #99B7BF 0%, rgba(246, 183, 183, 0.37) 100%);
+    --frg-headings: var(--midnight-500);
+    --frg-body: var(--midnight-500);
+
+    // Button
+    --button-bg: var(--cream-500);
+    --button-color: var(--midnight-500);
+    --button-border: var(--cream-500);
+    // Button Hover
+    --button-bg-hover: var(--midnight-500);
+    --button-color-hover: var(--cream-500);
+    --button-border-hover: var(--midnight-500);
+}

@@ -1,6 +1,10 @@
+.section {
+    background: var(--bkg-default);
+}
+
 .contentContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
     gap: 64px;
 
     @include media-down(tablet) {
@@ -37,10 +41,11 @@
     align-items: flex-start;
     gap: 8px;
     color: var(--frg-headings);
+    max-width: 550px;
 }
 
 .title {
-    @include displaySm;
+    @include displayLg;
     color: var(--frg-headings);
     font-weight: $font-weight-medium;
     text-wrap: balance;
@@ -48,7 +53,7 @@
 }
 
 .body {
-    @include textMd;
+    @include textLg;
     font-size: 18px;
     max-width: 544px;
     color: var(--frg-body);

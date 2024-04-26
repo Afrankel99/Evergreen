@@ -11,7 +11,7 @@ const TwoPictureSection = (props) => {
   const { title, _rawContent, addButton, button, imageOne, imageTwo, theme, spacingOptions } = data;
 
   return (
-    <Section sectionName="TwoPictureSection" data-theme={theme} {...spacingOptions}>
+    <Section className={styles.section} sectionName="TwoPictureSection" data-theme={theme} {...spacingOptions}>
       <div className={styles.contentContainer}>
         <div className={styles.imageContainer}>
           <Image className={styles.firstImage} imageData={imageOne} />
