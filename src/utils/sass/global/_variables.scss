@@ -12,12 +12,12 @@
     --frg-body: var(--midnight-500);
 
     // Button
-    --button-bg: var(--cream-500);
-    --button-color: var(--midnight-500);
+    --button-bg: var(--midnight-500);
+    --button-color: var(--cream-500);
     --button-border: var(--midnight-500);
     // Button Hover
-    --button-bg-hover: var(--midnight-500);
-    --button-color-hover: var(--cream-500);
+    --button-bg-hover: var(--cream-500);
+    --button-color-hover: var(--midnight-500);
     --button-border-hover: var(--midnight-500);
 }
 
@@ -42,11 +42,11 @@
     --frg-body: var(--midnight-500);
 
     // Button
-    --button-bg: var(--midnight-500);
-    --button-color: var(--cream-500);
+    --button-bg: transparent;
+    --button-color: var(--midnight-500);
     --button-border: var(--midnight-500);
     // Button Hover
-    --button-bg-hover: transparent;
-    --button-color-hover: var(--midnight-500);
+    --button-bg-hover: var(--midnight-500);
+    --button-color-hover: var(--cream-500);
     --button-border-hover: var(--midnight-500);
 }
