@@ -29,10 +29,43 @@ const ProductDetails = (props) => {
       validation: { required: true },
       validationMessage: 'Please enter a pickup date',
     },
+    {
+      type: 'text',
+      name: 'name',
+      placeholder: 'Your name',
+      label: 'Name',
+      validation: { required: true },
+      validationMessage: 'Please enter your name',
+    },
+    {
+      type: 'email',
+      name: 'email',
+      placeholder: 'email@company.com.au',
+      label: 'Email',
+      defaultValue: '',
+      validation: { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i },
+      validationMessage: 'Please enter a valid email',
+    },
+    {
+      type: 'tel',
+      name: 'phoneNumber',
+      placeholder: '04XX XXX XXX',
+      label: 'Phone number',
+      defaultValue: '',
+      validation: { required: true, minLength: 8 },
+      validationMessage: 'Please enter a valid number',
+    },
+    {
+      type: 'textarea',
+      name: 'wish',
+      placeholder: 'Your wish',
+      label: 'Your wish',
+      defaultValue: '',
+    },
   ];
 
   return (
-    <Section sectionName="ProductDetails" sectionSpacing="l">
+    <Section data-theme="light" sectionName="ProductDetails" sectionSpacing="l">
       <div className={styles.contentContainer}>
         <div className={styles.carouselContainer}>
           <Carousel addArrows>

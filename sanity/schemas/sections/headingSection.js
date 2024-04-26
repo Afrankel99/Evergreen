@@ -21,6 +21,21 @@ export default {
       group: 'data',
     },
     {
+      name: 'theme',
+      title: 'Theme',
+      type: 'string',
+      options: {
+        list: [
+          { value: 'light', title: 'Light' },
+          { value: 'dark', title: 'Dark' },
+        ],
+        layout: 'radio',
+        direction: 'horizontal',
+      },
+      initialValue: 'light',
+      group: 'styles',
+    },
+    {
       name: 'spacingOptions',
       title: 'Spacing Options',
       type: 'spacingOptions',

@@ -35,7 +35,7 @@ const ProductFeedSection = (props) => {
   const products = productFeedData?.allSanityProduct?.nodes || [];
 
   return (
-    <Section data-theme="cream" sectionName="ProductFeedSection" {...spacingOptions}>
+    <Section data-theme="light" sectionName="ProductFeedSection" {...spacingOptions}>
       <div className={styles.contentContainer}>
         <div className={styles.grid}>{products.map((product) => renderProduct(product))}</div>
       </div>

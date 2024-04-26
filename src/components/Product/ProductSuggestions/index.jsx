@@ -11,7 +11,7 @@ const ProductSuggestions = (props) => {
   const { similarProducts } = data;
 
   return (
-    <Section sectionName="ProductSuggestions" sectionSpacing="l">
+    <Section data-theme="light" sectionName="ProductSuggestions" sectionSpacing="l">
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>You may also like</h1>

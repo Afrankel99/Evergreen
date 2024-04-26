@@ -1,40 +1,37 @@
 :root {
     --base-black: #000000;
     --base-white: #ffffff;
-    --cream-100: #FEFDF7;
-    --cream-500: #FFE9CC;
-    --tangerine-500: #EB3D00;
-    --salmon-500: #FFB4A0;
-    --pine-500: #22411E;
-    --sacramento-500: #132111;
+    --cream-500: #FEFBF7;
+    --midnight-500: #0C1924;
+
 }
 
 [data-theme="light"] {
-    --bkg-default: var(--base-white);
-    --frg-headings: var(--base-black);
-    --frg-body: var(--base-black);
+    --bkg-default: var(--cream-500);
+    --frg-headings: var(--midnight-500);
+    --frg-body: var(--midnight-500);
 
     // Button
-    --button-bg: var(--base-black);
-    --button-color: var(--base-white);
-    --button-border: var(--base-black);
+    --button-bg: var(--midnight-500);
+    --button-color: var(--cream-500);
+    --button-border: var(--midnight-500);
     // Button Hover
-    --button-bg-hover: var(--base-white);
-    --button-color-hover: var(--base-black);
-    --button-border-hover: var(--base-black);
+    --button-bg-hover: var(--cream-500);
+    --button-color-hover: var(--midnight-500);
+    --button-border-hover: var(--midnight-500);
 }
 
 [data-theme="dark"] {
-    --bkg-default: var(--base-black);
-    --frg-headings: var(--base-white);
-    --frg-body: var(--base-white);
+    --bkg-default: var(--midnight-500);
+    --frg-headings: var(--cream-500);
+    --frg-body: var(--cream-500);
 
     // Button
-    --button-bg: var(--base-white);
-    --button-color: var(--base-black);
-    --button-border: var(--base-white);
+    --button-bg: var(--cream-500);
+    --button-color: var(--midnight-500);
+    --button-border: var(--cream-500);
     // Button Hover
-    --button-bg-hover: var(--base-black);
-    --button-color-hover: var(--base-white);
-    --button-border-hover: var(--base-white);
+    --button-bg-hover: var(--midnight-500);
+    --button-color-hover: var(--cream-500);
+    --button-border-hover: var(--cream-500);
 }

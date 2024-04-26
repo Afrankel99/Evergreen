@@ -6,6 +6,7 @@ export const HeadingSectionFragment = graphql`
     _type
     title
     _rawContent
+    theme
     spacingOptions {
       sectionSpacing
       spacingOverride

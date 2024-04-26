@@ -36,7 +36,7 @@ const ProductCarouselSection = (props) => {
   );
 
   return (
-    <Section className={styles.section} sectionName="ProductCarouselSection" {...spacingOptions}>
+    <Section data-theme="light" className={styles.section} sectionName="ProductCarouselSection" {...spacingOptions}>
       <div className={styles.contentContainer}>
         <div className={styles.categoriesContainer}>
           {categories.map((category, index) => (
