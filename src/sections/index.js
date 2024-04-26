@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 export { default as BannerSection } from './BannerSection';
+export { default as ContactFormSection } from './ContactFormSection';
 export { default as HeadingSection } from './HeadingSection';
 export { default as ThreePictureSection } from './ThreePictureSection';
 export { default as ProductCarouselSection } from './ProductCarouselSection';

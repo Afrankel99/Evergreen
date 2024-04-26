@@ -3,7 +3,7 @@ import { TbBrandInstagram } from 'react-icons/tb';
 
 export default {
   name: 'instagramSection',
-  title: 'Instagram Section',
+  title: 'Instagram',
   type: 'object',
   groups: defaultSectionGroups,
   icon: TbBrandInstagram,
