@@ -3,10 +3,14 @@ import { PortableText } from '@portabletext/react';
 import { blockComponents } from './blockComponents';
 
 const RichText = (props) => {
-  const { blocks = [], components } = props;
+  const { blocks = [], components, className } = props;
   if (blocks?.length === 0 || blocks === null) return null;
 
-  return <PortableText value={blocks} components={components || blockComponents(props)} />;
+  return (
+    <div className={className}>
+      <PortableText className={className} value={blocks} components={components || blockComponents(props)} />
+    </div>
+  );
 };
 
 export default RichText;

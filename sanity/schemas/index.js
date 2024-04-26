@@ -7,6 +7,7 @@ import settings from './documents/settings';
 // sections
 import bannerSection from './sections/bannerSection';
 import contactFormSection from './sections/contactFormSection';
+import closingCtaSection from './sections/closingCtaSection';
 import headingSection from './sections/headingSection';
 import productCarouselSection from './sections/productCarouselSection';
 import productFeedSection from './sections/productFeedSection';
@@ -36,6 +37,7 @@ export const schemaTypes = [
 
   // sections
   contactFormSection,
+  closingCtaSection,
   headingSection,
   twoColumnSection,
   twoPictureSection,

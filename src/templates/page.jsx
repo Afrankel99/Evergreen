@@ -58,6 +58,7 @@ export const query = graphql`
       sections {
         __typename # __typename used above for debugging
         ...BannerSectionFragment
+        ...ClosingCtaSectionFragment
         ...ContactFormSectionFragment
         ...HeadingSectionFragment
         ...ProductCarouselSectionFragment

@@ -39,6 +39,7 @@ export default {
         // note: these need to be in alphabetical order
         { type: 'bannerSection' },
         { type: 'contactFormSection' },
+        { type: 'closingCtaSection' },
         { type: 'headingSection' },
         { type: 'productCarouselSection' },
         { type: 'productFeedSection' },
