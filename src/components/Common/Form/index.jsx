@@ -23,6 +23,9 @@ const Form = (props) => {
 
   if (!fields) return null;
 
+  const submissionMessage =
+    'Thank you for supporting our small business! We will contact you within 3 days to proceed with next steps and payment methods.';
+
   const onSubmit = async (data) => {
     const formValues = {
       'form-name': name,
@@ -100,11 +103,7 @@ const Form = (props) => {
             </div>
           );
         })}
-        {showSuccess && (
-          <p className={styles.successMessage}>
-            Thank you for your order! We will contact you within 3 days to proceed with next steps.
-          </p>
-        )}
+        {showSuccess && <p className={styles.successMessage}>{submissionMessage} </p>}
         <Button type="submit" className={styles.formButton} disabled={isSubmitting} title="Submit Form" hideArrow>
           {isSubmitting ? 'Submitting' : 'Submit Order'}
         </Button>
