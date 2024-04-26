@@ -12,12 +12,6 @@ const BannerSection = (props) => {
   return (
     <Section className={styles.section} noContainer sectionName="BannerSection">
       <div className={styles.contentContainer}>
-        <div className={styles.textContainer}>
-          <div className={styles.text}>
-            {/* {title && <h1 className={styles.title}>{title}</h1>} */}
-            {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
-          </div>
-        </div>
         <div className={styles.imageWrapper}>
           <Image imageData={image}></Image>
         </div>

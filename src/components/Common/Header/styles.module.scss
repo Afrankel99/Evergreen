@@ -3,7 +3,7 @@
 }
 
 .header {
-    padding: 16px 24px;
+    padding: 20px 24px;
     position: fixed !important;
     top: 0;
     left: 0;
@@ -58,8 +58,12 @@
     display: flex;
     @include textMd;
     text-transform: uppercase;
-    font-weight: $font-weight-medium;    
+    font-weight: $font-weight-medium;
     color: var(--frg-headings);
+
+    a {
+        color: var(--frg-headings);
+    }
 
     &.activeLink {
         .navLink {}
