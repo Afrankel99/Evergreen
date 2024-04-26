@@ -20,44 +20,59 @@
     }
 }
 
-.carouselContainer {
-    overflow: hidden;
+// .carouselContainer {
+//     overflow: hidden;
+//     flex: 1;
+
+//     :global(.embla__dotsAndArrows) {
+//         bottom: calc(50% - 28px);
+//         position: absolute;
+//         width: 100%;
+//         z-index: 3;
+//         justify-content: space-between;
+//         width: 100%;
+//         display: flex;
+
+
+//         @include media-down(large-mobile) {
+//             display: none;
+//         }
+
+//         :global(.embla__dotsAndArrows__Inner) {
+//             justify-content: space-between;
+//             width: 100%;
+//             display: flex;
+//         }
+
+//         :global(.embla__button) {
+//             :global(svg) {
+//                 :global(rect) {
+//                     background-color: white;
+//                     stroke: var(--tangerine-500);
+//                 }
+
+//                 :global(path) {
+//                     background-color: white;
+//                     fill: var(--tangerine-500);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.imagesContainer {
     flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
-    :global(.embla__dotsAndArrows) {
-        bottom: calc(50% - 28px);
-        position: absolute;
-        width: 100%;
-        z-index: 3;
-        justify-content: space-between;
-        width: 100%;
-        display: flex;
+.imagesContainer> :first-child {
+    grid-column: span 2;
+}
 
-
-        @include media-down(large-mobile) {
-            display: none;
-        }
-
-        :global(.embla__dotsAndArrows__Inner) {
-            justify-content: space-between;
-            width: 100%;
-            display: flex;
-        }
-
-        :global(.embla__button) {
-            :global(svg) {
-                :global(rect) {
-                    background-color: white;
-                    stroke: var(--tangerine-500);
-                }
-
-                :global(path) {
-                    background-color: white;
-                    fill: var(--tangerine-500);
-                }
-            }
-        }
-    }
+.imagesContainer> :not(:first-child) {
+    grid-column: span 1;
 }
 
 .imageContainer {

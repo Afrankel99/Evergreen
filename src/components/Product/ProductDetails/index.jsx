@@ -65,7 +65,8 @@ const ProductDetails = (props) => {
   return (
     <Section data-theme="light" sectionName="ProductDetails" sectionSpacing="l">
       <div className={styles.contentContainer}>
-        <div className={styles.carouselContainer}>
+        <div className={styles.imagesContainer}>
+          {/* <div className={styles.carouselContainer}>
           <Carousel addArrows>
             {images?.map((image) => (
               <div key={image?._id} className={styles.imageContainer}>
@@ -73,7 +74,14 @@ const ProductDetails = (props) => {
               </div>
             ))}
           </Carousel>
+        </div> */}
+          {images?.map((image) => (
+            <div key={image?._id} className={styles.imageContainer}>
+              <Image imageData={image} />
+            </div>
+          ))}
         </div>
+
         <div className={styles.infoContainer}>
           <div className={styles.textContainer}>
             {name && <h1 className={styles.name}>{name}</h1>}

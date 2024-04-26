@@ -2,7 +2,7 @@
 // @import '../../../utils/sass/media.scss';
 // @import '../../../utils/sass/_media.scss';
 body {
-    background: var(--cream-100);
+    // background: linear-gradient(180deg, var(--cream-500) 50%, var(--midnight-500) 50%);
 }
 
 .buttons {
@@ -15,8 +15,5 @@ body {
 
 .main-children {
     padding-top: var(--header-height);
-
-    // &.isHome {
-    //     padding-top: 0;
-    // }
+    background: var(--cream-500);
 }
