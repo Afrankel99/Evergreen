@@ -116,7 +116,7 @@ const Header = (props) => {
               ))}
             </ul>
           </nav>
-          <div className={styles.contactNav} data-theme="light" ref={loginRef}>
+          <div className={styles.contactNav} ref={loginRef}>
             <Button title={button?.title} to={button?.link} />
           </div>
           <button

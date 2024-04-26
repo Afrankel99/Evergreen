@@ -19,11 +19,15 @@
     font-weight: $font-weight-regular;
     border: none;
     background-color: transparent;
-    color: #AEAEAE;
+    color: var(--midnight-500);
+
+    &:hover {
+        color: var(--fruity-500);
+        background-color: transparent;
+    }
 
     &.active {
-        color: var(--sacramento-500);
-        font-weight: $font-weight-bold;
+        color: var(--fruity-500);
     }
 }
 
