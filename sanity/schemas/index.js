@@ -10,7 +10,6 @@ import contactFormSection from './sections/contactFormSection';
 import headingSection from './sections/headingSection';
 import productCarouselSection from './sections/productCarouselSection';
 import productFeedSection from './sections/productFeedSection';
-import threePictureSection from './sections/threePictureSection';
 import twoColumnSection from './sections/twoColumnSection';
 import twoPictureSection from './sections/twoPictureSection';
 import instagramSection from './sections/instagramSection';
@@ -40,7 +39,6 @@ export const schemaTypes = [
   headingSection,
   twoColumnSection,
   twoPictureSection,
-  threePictureSection,
   productFeedSection,
   bannerSection,
   productCarouselSection,

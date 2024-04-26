@@ -62,7 +62,6 @@ export const query = graphql`
         ...HeadingSectionFragment
         ...ProductCarouselSectionFragment
         ...ProductFeedSectionFragment
-        ...ThreePictureSectionFragment
         ...TwoColumnSectionFragment
         ...TwoPictureSectionFragment
         ...InstagramSectionFragment

@@ -42,7 +42,6 @@ export default {
         { type: 'headingSection' },
         { type: 'productCarouselSection' },
         { type: 'productFeedSection' },
-        { type: 'threePictureSection' },
         { type: 'twoColumnSection' },
         { type: 'twoPictureSection' },
         { type: 'instagramSection' },
