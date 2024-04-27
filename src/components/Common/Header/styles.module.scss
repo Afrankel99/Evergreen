@@ -45,10 +45,6 @@
     display: flex;
     gap: 32px;
     align-items: center;
-
-    @include media-down(small-desktop) {
-        gap: 24px;
-    }
 }
 
 .navItem {
@@ -284,17 +280,19 @@
             padding: 24px 0;
             overflow-y: scroll !important;
             display: flex;
-            justify-content: space-between;
+            background-color: var(--bkg-default);
 
             .logoWrapper {
-                display: none;
+                margin-right: auto;
+                padding-left: 24px;
             }
 
             .contactNav {
-                width: 100%;
                 display: flex;
-                padding: 0 24px;
                 flex-direction: column;
+                width: 100%;
+                padding: 0 24px;
+                margin-top: auto;
 
                 a {
                     width: 100%;
@@ -304,7 +302,6 @@
             .nav {
                 display: flex;
                 width: 100%;
-                margin-top: 60px;
 
                 .navLink {
                     padding: 24px;
@@ -318,6 +315,7 @@
         width: 100%;
         flex-direction: column;
         gap: 0;
+        padding-left: 0;
     }
 
     .chevron {
@@ -340,12 +338,12 @@
         }
 
         &.activeLink {
-
-            .navLink {}
+            .navLink {
+                text-decoration: underline;
+            }
         }
 
         &:hover {
-
             .navLink {}
         }
 
@@ -356,7 +354,7 @@
             transition: max-height 1s ease;
 
             .navItem {
-                padding-left: 24px;
+                // padding-left: 24px;
 
                 &:hover {}
             }

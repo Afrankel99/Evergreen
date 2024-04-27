@@ -17,7 +17,7 @@ const ClosingCtaSection = (props) => {
       <div className={styles.textContainer}>
         {title && <h1 className={styles.title}>{title}</h1>}
         {_rawContent && <RichText className={styles.body} blocks={_rawContent} />}
-        {addButton && <Button className={styles.button} title={button.title} to={button.link} />}
+        {addButton && button?.title && <Button className={styles.button} title={button?.title} to={button?.link} />}
       </div>
       <img src={leafImage} className={classNames(styles.leaf, styles.right)} />
     </Section>

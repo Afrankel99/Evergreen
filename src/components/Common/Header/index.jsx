@@ -80,6 +80,8 @@ const Header = (props) => {
     setHamburgerMenuActive(!hamburgerMenuActive);
   };
 
+  console.log('navItems', navItems);
+
   return (
     <Section
       as="header"
@@ -106,7 +108,7 @@ const Header = (props) => {
                   key={navLink?._key}
                   className={classNames(
                     styles.navItem,
-                    navLink?.ctaLink?.internalLink?.slug?.current === pathname && styles.activeLink
+                    navLink?.link?.internalLink?.slug?.current === pathname && styles.activeLink
                   )}
                 >
                   <Link key={navLink?.title} className={classNames(styles.link, styles.navLink)} to={navLink?.link}>

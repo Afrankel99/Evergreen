@@ -63,8 +63,13 @@ const ProductDetails = (props) => {
   ];
 
   return (
-    <Section data-theme="light" sectionName="ProductDetails" sectionSpacing="l">
+    <Section data-theme="light" sectionName="ProductDetails" spacingOverride="removeBottomSpacing" sectionSpacing="l">
       <div className={styles.contentContainer}>
+        <div className={styles.mobileTextContainer}>
+          {name && <h1 className={styles.name}>{name}</h1>}
+          {price && <span className={styles.price}>{`$${price}`}</span>}
+          {description && <p className={styles.body}>{description}</p>}
+        </div>
         <div className={styles.imagesContainer}>
           {/* <div className={styles.carouselContainer}>
           <Carousel addArrows>

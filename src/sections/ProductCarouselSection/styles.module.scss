@@ -12,6 +12,23 @@
     width: 100%;
     max-width: 730px;
     margin: auto;
+
+    @include media-down(small-tablet) {
+        display: none;
+    }
+}
+
+.mobileCategoriesContainer {
+    display: none;
+
+    @include media-down(small-tablet) {
+        display: flex;
+        width: 100%;
+    }
+
+    > div {
+        width: 100%;
+    }
 }
 
 .categoryButton {

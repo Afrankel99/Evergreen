@@ -32,16 +32,17 @@
     width: 100%;
     background-color: var(--bkg-default);
     height: 100%;
+}
 
-    .form {
-        display: flex;
-        flex-direction: column;
-        padding: 24px;
-        height: 100%;
-        gap: 20px;
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    height: 100%;
+    gap: 20px;
 
-        @include media-down(large-tablet) {
-            padding: 24px;
-        }
+    @include media-down(large-tablet) {
+        padding: 0;
+        padding-top: 24px;
     }
 }

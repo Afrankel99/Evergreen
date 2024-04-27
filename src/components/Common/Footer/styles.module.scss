@@ -48,13 +48,28 @@
     }
 }
 
-.footerItem {
-    flex-grow: 1;
-    flex-basis: calc(33.33% - 10px);
-    margin: 5px;
-}
-
 .copyright {
     @include textSm;
     color: var(--frg-headings);
+}
+
+.footerGroupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footerCategory {
+    @include textMd;
+    color: var(--frg-headings);
+    font-weight: $font-weight-medium;
+}
+
+.link {
+    @include textSm;
+    color: var(--frg-headings);
+
+    a {
+        color: var(--frg-headings);
+    }
 }

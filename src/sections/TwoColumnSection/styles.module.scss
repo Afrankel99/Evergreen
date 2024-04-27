@@ -10,7 +10,7 @@
 
     @include media-down(tablet) {
         flex-direction: column;
-        gap: 24px;
+        gap: 36px;
     }
 
     &.left {

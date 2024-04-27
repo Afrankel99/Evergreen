@@ -16,16 +16,59 @@
 .imagesContainer {
     display: flex;
     gap: 16px;
+
+    @include media-down(small-tablet) {
+        display: none;
+    }
+}
+
+.imageContainer {
+    height: 100%;
+}
+
+.mobileCarouselContainer {
+    display: none;
+
+    @include media-down(small-tablet) {
+        display: flex;
+        justify-content: center;
+
+        :global(.embla__slide) {
+            --gap: 16px;
+            --width: 33%;
+            height: 100%;
+
+            @include media-down(large-tablet) {
+                --width: 45%;
+            }
+
+            @include media-down(large-mobile) {
+                --width: 75%;
+            }
+
+            @include media-down(mobile) {
+                --width: 85%;
+            }
+
+            flex: 0 0 calc(var(--width) - var(--gap));
+            margin-right: var(--gap);
+        }
+    }
 }
 
 .product {
+    display: flex;
+    flex-direction: column;
     position: relative;
     flex: 1;
     aspect-ratio: 3/4;
+    height: 100%;
 
-    &:hover {
-        .overlay {
-            opacity: 1;
+    @include media-up(small-tablet) {
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
         }
     }
 }
@@ -45,8 +88,27 @@
     opacity: 0;
     transition: opacity 0.3s ease;
 
-    .name, .price {
+    @include media-down(small-tablet) {
+        display: none;
+    }
+
+    .name,
+    .price {
         @include textMd;
         color: white;
+    }
+}
+
+.mobileInfo {
+    display: none;
+
+    @include media-down(small-tablet) {
+        display: flex
+    }
+
+    .name,
+    .price {
+        @include textMd;
+        color: var(--frg-headings);
     }
 }

@@ -20,6 +20,17 @@
     }
 }
 
+.mobileTextContainer {
+    display: none;
+
+    @include media-down(small-tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
 // .carouselContainer {
 //     overflow: hidden;
 //     flex: 1;
@@ -93,6 +104,10 @@
     align-items: flex-start;
     gap: 8px;
     flex: 1;
+
+    @include media-down(small-tablet) {
+        display: none;
+    }
 }
 
 .name {

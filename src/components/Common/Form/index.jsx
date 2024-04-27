@@ -65,7 +65,7 @@ const Form = (props) => {
   };
 
   return (
-    <div className={classNames(className, styles.formdiv)}>
+    <div className={classNames(styles.formdiv)}>
       {submissionError && <p>{submissionError}</p>}
       <form
         method="POST"

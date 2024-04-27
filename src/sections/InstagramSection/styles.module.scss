@@ -24,12 +24,44 @@
       display: flex;
       gap: 24px;
 
-      @include media-down(tablet) {
-          flex-direction: column;
+      @include media-down(large-tablet) {
+          display: none;
       }
   }
 
   .imageContainer {
+      display: flex;
       flex: 1;
       aspect-ratio: 3/4;
+      height: 100%;
+  }
+
+  .mobileCarouselContainer {
+      display: none;
+
+      @include media-down(large-tablet) {
+          display: flex;
+          justify-content: center;
+
+          :global(.embla__slide) {
+              --gap: 16px;
+              --width: 33%;
+              height: 100%;
+
+              @include media-down(large-tablet) {
+                  --width: 45%;
+              }
+
+              @include media-down(large-mobile) {
+                  --width: 75%;
+              }
+
+              @include media-down(mobile) {
+                  --width: 85%;
+              }
+
+              flex: 0 0 calc(var(--width) - var(--gap));
+              margin-right: var(--gap);
+          }
+      }
   }

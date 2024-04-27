@@ -38,6 +38,10 @@
     right: 0;
     max-height: 460px;
 
+    @include media-down(tablet) {
+        display: none;
+    }
+
     &.left {
         left: 0;
     }

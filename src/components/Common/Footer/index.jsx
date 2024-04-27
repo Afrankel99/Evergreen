@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Section from '~components/Common/Section';
 import Link from '~components/Common/Link';
 import Image from '~components/Common/Image';
-import FooterItem from '~components/Common/Footer/FooterItem';
 
 import * as styles from './styles.module.scss';
 
 const Footer = (props) => {
   const { data } = props || {};
   const { logo, footerLinks } = data || {};
-
-  const [activeMobileMenu, setActiveMobileMenu] = useState(null);
 
   return (
     <Section
@@ -30,19 +27,14 @@ const Footer = (props) => {
       </div>
       <div className={styles.rightPane}>
         {footerLinks?.map((footerLink) => (
-          <FooterItem
-            key={footerLink?.id}
-            categoryTitle={footerLink?.categoryTitle}
-            className={styles.footerItem}
-            setActiveMobileMenu={setActiveMobileMenu}
-            activeMobileMenu={activeMobileMenu}
-          >
+          <div key={footerLink?.id} className={styles.footerGroupContainer}>
+            <p className={styles.footerCategory}>{footerLink?.categoryTitle}</p>
             {footerLink?.siteLinks?.map((siteLink) => (
               <Link className={styles.link} key={siteLink?.id} to={siteLink?.link}>
                 <span>{siteLink?.title}</span>
               </Link>
             ))}
-          </FooterItem>
+          </div>
         ))}
       </div>
     </Section>
