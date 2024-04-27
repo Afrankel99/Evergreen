@@ -9,6 +9,8 @@
     align-items: center;
     text-align: center;
     gap: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .title {
@@ -34,11 +36,16 @@
 
 .leaf {
     position: absolute;
-    top: -40px;
     right: 0;
-    max-height: 460px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 550px;
 
-    @include media-down(tablet) {
+    @include media-down(large-tablet) {
+        opacity: 0.3;
+    }
+
+    @include media-down(small-tablet) {
         display: none;
     }
 

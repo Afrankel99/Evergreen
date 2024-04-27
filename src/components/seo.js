@@ -6,70 +6,50 @@
  */
 
 import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 
-const Seo = ({ description, title, children }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
-
-  const metaDescription = description || site.siteMetadata.description;
+const Seo = () => {
+  const description = `We are a small business, creating unique bespoke floral designs. Our little flower studio is located in North Parramatta, and we are excited to provide you with specialized quality bouquets for any occasion.`;
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${process.env.GATSBY_SITE_URL}/#organization`,
+    name: 'Evergreen Studio',
+    url: `${process.env.GATSBY_SITE_URL}/`,
+    logo: `${process.env.GATSBY_SITE_URL}/schema-icon.png`,
+    sameAs: 'https://www.instagram.com/evergreen_flowerstudio/',
+  };
 
   return (
+    // <>
+    //   <title>Evergreen</title>
+    //   <meta name="description" content={metaDescription} />
+    //   <meta property="og:title" content={title} />
+    //   <meta property="og:description" content={metaDescription} />
+    //   <meta property="og:type" content="website" />
+    //   <link
+    //     rel="stylesheet"
+    //     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    //   ></link>
+    //   {children}
+    // </>
     <>
-      <title>Evergreen</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      ></link>
-      {children}
+      <title></title>
+      <meta name="description" content={description} />
+      {/* <meta name="image" content={} /> */}
+      {/* {schema?.length > 0 ? (
+        <>
+          {schema?.map((s) => (
+            <script key={Math.random() * 10000} type="application/ld+json">
+              {JSON.stringify(cleanSchema(s))}
+            </script>
+          ))}
+        </>
+      ) : (
+        <script type="application/ld+json">{JSON.stringify(defaultSchemaToUse)}</script>
+      )} */}
+      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+      <link rel="icon" type="image/png" href="/favicon-light-mode.jpg" />
     </>
-    //     <>
-    //     <title></title>
-    //     <meta name="description" content={seo.description} />
-    //     <meta name="keywords" content={seo?.keywords} />
-    //     <meta name="image" content={seo.image} />
-    //     {seo.publishStatus === 'noIndex' && <meta name="robots" content="noindex" />}
-    //     <meta name="wm-gatsby-prismic" content="WM Gatsby Prismic" />
-    //     {schema?.length > 0 ? (
-    //       <>
-    //         {schema?.map((s) => (
-    //           <script key={Math.random() * 10000} type="application/ld+json">
-    //             {JSON.stringify(cleanSchema(s))}
-    //           </script>
-    //         ))}
-    //       </>
-    //     ) : (
-    //       <script type="application/ld+json">{JSON.stringify(defaultSchemaToUse)}</script>
-    //     )}
-    //     <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-    //     <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
-    //     <link rel="icon" type="image/png" href="/favicon-light-mode.png" />
-    //     <Facebook
-    //       desc={seo.description}
-    //       image={seo.image}
-    //       title={seo.title}
-    //       type={article ? 'article' : 'website'}
-    //       url={seo.url}
-    //       locale={ogLanguage}
-    //       name={siteName}
-    //     />
-    //     <Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
-    //   </>
   );
 };
 
