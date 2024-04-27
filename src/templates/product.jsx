@@ -4,6 +4,7 @@ import Layout from '../components/Common/Layout';
 import ProductDetails from '../components/Product/ProductDetails';
 import ProductSuggestions from '../components/Product/ProductSuggestions';
 import ClosingCtaSection from '../sections/ClosingCtaSection';
+import website from '../../config/website';
 
 const Product = (props) => {
   const { location, data: staticData } = props;
@@ -54,21 +55,20 @@ const Product = (props) => {
 export default Product;
 
 // TODO: add in the SEO component
-// export const Head = (props) => {
-//   const { location, data } = props;
-//   const { sanityPage } = data;
-//   const { seoData, title: pageTitle } = sanityPage;
+export const Head = (props) => {
+  const { data } = props;
+  const { sanityPage } = data;
+  const { seoData, title: pageTitle } = sanityPage;
 
-//   const title = seoData?.seoTitle || pageTitle || '';
-//   const description = seoData?.seoDescription || '';
-//   const openGraphImage = seoData?.openGraphImage || '';
-//   const keywords = seoData?.seoKeywords || '';
-//   const publishStatus = seoData?.publishStatus || '';
-//   const updatedDate = sanityPage?.updatedAt;
-//   const publishedDate = sanityPage?.createdAt;
-//   const seo = { title, description, openGraphImage, keywords, publishStatus, updatedDate, publishedDate };
-//   return <Seo {...seo} location={location} />;
-// };
+  const title = pageTitle || website.title || '';
+  const description = seoData?.seoDescription || '';
+  const openGraphImage = seoData?.openGraphImage || '';
+  const publishStatus = seoData?.publishStatus || '';
+  const updatedDate = sanityPage?._updatedAt;
+  const publishedDate = sanityPage?._createdAt;
+  const seo = { title, description, openGraphImage, publishStatus, updatedDate, publishedDate };
+  return <Seo {...seo} />;
+};
 
 export const query = graphql`
   query Product($slug: String!) {

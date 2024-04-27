@@ -80,8 +80,6 @@ const Header = (props) => {
     setHamburgerMenuActive(!hamburgerMenuActive);
   };
 
-  console.log('navItems', navItems);
-
   return (
     <Section
       as="header"

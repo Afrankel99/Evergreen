@@ -3,11 +3,10 @@ import React from 'react';
 
 import * as styles from './styles.module.scss';
 
-export const blockComponents = () => {
-  //   const { pages } = useContext(SiteContext);
-  console.log(styles, 'styles');
+export const blockComponents = () =>
+//   const { pages } = useContext(SiteContext);
 
-  return {
+  ({
     block: {
       h3: ({ children }) => <h3 className={styles.heading}>{children}</h3>,
       h5: ({ children }) => <h5 className={styles.subheading}>{children}</h5>,
@@ -53,5 +52,4 @@ export const blockComponents = () => {
       bullet: ({ children }) => <li className={styles.li}>{children}</li>,
       number: ({ children }) => <li className={styles.li}>{children}</li>,
     },
-  };
-};
+  });

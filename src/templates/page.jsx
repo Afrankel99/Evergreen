@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Common/Layout';
 import SanitySection from '../components/Common/SanitySection';
 import Section from '../components/Common/Section';
+import Seo from '../components/seo';
+import website from '../../config/website';
 
 const Page = (props) => {
   const { location, data: staticData } = props;
@@ -31,27 +33,28 @@ const Page = (props) => {
 export default Page;
 
 // TODO: add in the SEO component
-// export const Head = (props) => {
-//   const { location, data } = props;
-//   const { sanityPage } = data;
-//   const { seoData, title: pageTitle } = sanityPage;
+export const Head = (props) => {
+  const { data } = props;
+  const { sanityPage } = data;
+  const { seoData, title: pageTitle } = sanityPage;
 
-//   const title = seoData?.seoTitle || pageTitle || '';
-//   const description = seoData?.seoDescription || '';
-//   const openGraphImage = seoData?.openGraphImage || '';
-//   const keywords = seoData?.seoKeywords || '';
-//   const publishStatus = seoData?.publishStatus || '';
-//   const updatedDate = sanityPage?.updatedAt;
-//   const publishedDate = sanityPage?.createdAt;
-//   const seo = { title, description, openGraphImage, keywords, publishStatus, updatedDate, publishedDate };
-//   return <Seo {...seo} location={location} />;
-// };
+  const title = pageTitle || website.title || '';
+  const description = seoData?.seoDescription || '';
+  const openGraphImage = seoData?.openGraphImage || '';
+  const publishStatus = seoData?.publishStatus || '';
+  const updatedDate = sanityPage?._updatedAt;
+  const publishedDate = sanityPage?._createdAt;
+  const seo = { title, description, openGraphImage, publishStatus, updatedDate, publishedDate };
+  return <Seo {...seo} />;
+};
 
 export const query = graphql`
   query Page($slug: String!) {
     sanityPage(slug: { current: { eq: $slug } }) {
       _id
       title
+      _createdAt
+      _updatedAt
       slug {
         current
       }
