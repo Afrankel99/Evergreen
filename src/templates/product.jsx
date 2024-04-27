@@ -4,6 +4,7 @@ import Layout from '../components/Common/Layout';
 import ProductDetails from '../components/Product/ProductDetails';
 import ProductSuggestions from '../components/Product/ProductSuggestions';
 import ClosingCtaSection from '../sections/ClosingCtaSection';
+import Seo from '../components/seo';
 import website from '../../config/website';
 
 const Product = (props) => {
@@ -58,15 +59,15 @@ export default Product;
 export const Head = (props) => {
   const { data } = props;
   const { sanityPage } = data;
-  const { seoData, title: pageTitle } = sanityPage;
+  const { title: pageTitle } = sanityPage;
 
   const title = pageTitle || website.title || '';
-  const description = seoData?.seoDescription || '';
-  const openGraphImage = seoData?.openGraphImage || '';
-  const publishStatus = seoData?.publishStatus || '';
+  //   const description = seoData?.seoDescription || '';
+  //   const openGraphImage = seoData?.openGraphImage || '';
+  //   const publishStatus = seoData?.publishStatus || '';
   const updatedDate = sanityPage?._updatedAt;
   const publishedDate = sanityPage?._createdAt;
-  const seo = { title, description, openGraphImage, publishStatus, updatedDate, publishedDate };
+  const seo = { title, updatedDate, publishedDate };
   return <Seo {...seo} />;
 };
 

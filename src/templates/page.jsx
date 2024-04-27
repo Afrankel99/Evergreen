@@ -36,15 +36,15 @@ export default Page;
 export const Head = (props) => {
   const { data } = props;
   const { sanityPage } = data;
-  const { seoData, title: pageTitle } = sanityPage;
+  const { title: pageTitle } = sanityPage;
 
   const title = pageTitle || website.title || '';
-  const description = seoData?.seoDescription || '';
-  const openGraphImage = seoData?.openGraphImage || '';
-  const publishStatus = seoData?.publishStatus || '';
+  //   const description = seoData?.seoDescription || '';
+  //   const openGraphImage = seoData?.openGraphImage || '';
+  //   const publishStatus = seoData?.publishStatus || '';
   const updatedDate = sanityPage?._updatedAt;
   const publishedDate = sanityPage?._createdAt;
-  const seo = { title, description, openGraphImage, publishStatus, updatedDate, publishedDate };
+  const seo = { title, updatedDate, publishedDate };
   return <Seo {...seo} />;
 };
 
