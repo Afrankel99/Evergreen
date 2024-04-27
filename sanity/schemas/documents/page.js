@@ -43,6 +43,7 @@ export default {
         { type: 'headingSection' },
         { type: 'productCarouselSection' },
         { type: 'productFeedSection' },
+        { type: 'richTextSection' },
         { type: 'twoColumnSection' },
         { type: 'twoPictureSection' },
         { type: 'instagramSection' },

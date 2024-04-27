@@ -1,0 +1,41 @@
+.section {
+    max-width: 720px;
+    margin: auto;
+  }
+  
+  .body {
+    color: var(--frg-body);
+  
+    ol,
+    ul {
+      margin-bottom: 20px;
+    }
+  
+    li {
+      margin-bottom: 5px;
+    }
+  
+    p {
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--frg-body);
+      margin-bottom: 24px;
+      margin-top: 32px;
+    }
+  
+    strong {
+      color: var(--frg-body);
+    }
+  
+    a {
+      color: var(--frg-body);
+    }
+  }

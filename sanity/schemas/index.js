@@ -14,6 +14,7 @@ import productFeedSection from './sections/productFeedSection';
 import twoColumnSection from './sections/twoColumnSection';
 import twoPictureSection from './sections/twoPictureSection';
 import instagramSection from './sections/instagramSection';
+import richTextSection from './sections/richTextSection';
 
 // objects
 import accordionItem from './objects/accordionItem';
@@ -43,6 +44,7 @@ export const schemaTypes = [
   twoPictureSection,
   productFeedSection,
   bannerSection,
+  richTextSection,
   productCarouselSection,
   instagramSection,
 
