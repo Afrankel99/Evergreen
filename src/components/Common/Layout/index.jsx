@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import Header from '~components/Common/Header';
 import Footer from '~components/Common/Footer';
@@ -12,6 +12,18 @@ const Layout = (props) => {
     settings,
     location: { pathname },
   } = props;
+
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', '#0C1924');
+    } else {
+      const newMetaTag = document.createElement('meta');
+      newMetaTag.setAttribute('name', 'theme-color');
+      newMetaTag.setAttribute('content', '#0C1924');
+      document.head.appendChild(newMetaTag);
+    }
+  }, []);
 
   return (
     <>
