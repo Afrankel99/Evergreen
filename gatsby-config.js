@@ -103,6 +103,14 @@ module.exports = {
         '~sass': path.resolve(__dirname, `src/utils/sass`),
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: process.env.GATSBY_SITE_URL,
+        sitemap: `${process.env.GATSBY_SITE_URL}/sitemap-0.xml`,
+        configFile: path.join(__dirname, 'config/robots-txt.production.js'),
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
