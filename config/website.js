@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
   title: 'Evergreen', // Default Site Title used for SEO & PWA
-  titleTemplate: `%s - Evergreen`, // Title Template
+  titleTemplate: `%s - Evergreen | Bespoke Flower Bouquets`, // Title Template
   description: `We are a small business, creating unique bespoke floral designs. Our little flower studio is located in North Parramatta, and we are excited to provide you with specialized quality bouquets for any occasion.`,
   siteName: 'Evergreen', // Sitename for Facebook
   siteLanguage: 'en', // Language Tag on <html> element

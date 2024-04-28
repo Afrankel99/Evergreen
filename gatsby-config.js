@@ -14,12 +14,25 @@ const path = require('path');
 
 const website = require('./config/website');
 
+// Environment variables
+const { GATSBY_SITE_URL, GATSBY_SANITY_STUDIO_PROJECT_ID } = process.env;
+const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix;
+
 module.exports = {
+  pathPrefix: website.pathPrefix,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: GATSBY_SITE_URL + pathPrefix,
+    pathPrefix,
+    title: website.title,
+    titleTemplate: website.titleTemplate,
+    description: website.description,
+    banner: website.banner,
+    siteName: website.siteName,
+    siteLanguage: website.siteLanguage,
+    ogLanguage: website.ogLanguage,
+    author: website.author,
+    socialLinks: website.socialLinks,
+    sanityProjectId: GATSBY_SANITY_STUDIO_PROJECT_ID,
   },
   flags: {
     FAST_DEV: true,
@@ -44,6 +57,17 @@ module.exports = {
   ],
 
   plugins: [
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          '/*': ['x-frame-options: DENY', 'x-xss-protection: 1; mode=block', 'x-content-type-options: nosniff'],
+        },
+        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
+      },
+    },
     {
       resolve: `gatsby-source-sanity`,
       options: {
