@@ -90,7 +90,7 @@ const Header = (props) => {
         topOfPage && styles.top,
         scrollDirection === 'down' && scrolledPastThreshold ? styles.hidden : null
       )}
-      data-theme="melon"
+      data-theme="dark"
     >
       <div className={styles.contentContainer}>
         <div className={classNames(styles.navContainer, hamburgerMenuActive && styles.hamburgerActive)}>
