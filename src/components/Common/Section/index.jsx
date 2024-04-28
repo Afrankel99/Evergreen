@@ -17,6 +17,7 @@ const Section = (props) => {
     bgImage,
     sectionSpacing,
     spacingOverride,
+    sectionRef,
     ...rest
   } = props;
 
@@ -39,7 +40,7 @@ const Section = (props) => {
   );
 
   return (
-    <HtmlElement className={sectionClasses} data-slice={isDev ? sectionName : null} {...rest}>
+    <HtmlElement ref={sectionRef} className={sectionClasses} data-slice={isDev ? sectionName : null} {...rest}>
       {noContainer ? (
         children
       ) : (

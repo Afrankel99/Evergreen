@@ -7,7 +7,7 @@ const Image = (props) => {
   const {
     loadingStrategy = 'lazy',
     imageData,
-    altText,
+    altText = '',
     className = '',
     url, // specifically for block content
     ...otherProps

@@ -12,6 +12,7 @@ export const FooterFragment = graphql`
         _key
         categoryTitle
         siteLinks {
+          _key
           ...ButtonFragment
         }
       }

@@ -27,10 +27,10 @@ const Footer = (props) => {
       </div>
       <div className={styles.rightPane}>
         {footerLinks?.map((footerLink) => (
-          <div key={footerLink?.id} className={styles.footerGroupContainer}>
+          <div key={footerLink?._key} className={styles.footerGroupContainer}>
             <p className={styles.footerCategory}>{footerLink?.categoryTitle}</p>
             {footerLink?.siteLinks?.map((siteLink) => (
-              <Link className={styles.link} key={siteLink?.id} to={siteLink?.link}>
+              <Link className={styles.link} key={siteLink?._key} to={siteLink?.link}>
                 <span>{siteLink?.title}</span>
               </Link>
             ))}

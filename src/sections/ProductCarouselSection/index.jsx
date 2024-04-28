@@ -24,10 +24,10 @@ const ProductCarouselSection = (props) => {
       </Link>
       <div className={styles.infoContainer}>
         <div className={styles.nameAndArrow}>
-          <Link className={styles.name} to={product?.slug?.current}>
+          <Link className={styles.name} aria-label={product?.name} to={product?.slug?.current}>
             {product?.name}
           </Link>
-          <Link className={styles.arrowLink} to={product?.slug?.current}>
+          <Link className={styles.arrowLink} aria-label={product?.name} to={product?.slug?.current}>
             <Arrow className={styles.arrow} />
           </Link>
         </div>
@@ -85,6 +85,7 @@ const ProductCarouselSection = (props) => {
             defaultValue={mobileSelectOptions[0]}
             onChange={(cat) => setActiveCategoryName(cat.value)}
             styles={customSelectStyles}
+            aria-activedescendant={undefined}
           />
         </div>
         <Carousel addArrows className={styles.carousel}>
