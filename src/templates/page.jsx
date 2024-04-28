@@ -32,20 +32,16 @@ const Page = (props) => {
 
 export default Page;
 
-// TODO: add in the SEO component
 export const Head = (props) => {
-  const { data } = props;
+  const { data, location } = props;
   const { sanityPage } = data;
   const { title: pageTitle } = sanityPage;
 
   const title = pageTitle || website.title || '';
-  //   const description = seoData?.seoDescription || '';
-  //   const openGraphImage = seoData?.openGraphImage || '';
-  //   const publishStatus = seoData?.publishStatus || '';
   const updatedDate = sanityPage?._updatedAt;
   const publishedDate = sanityPage?._createdAt;
   const seo = { title, updatedDate, publishedDate };
-  return <Seo {...seo} />;
+  return <Seo {...seo} location={location} />;
 };
 
 export const query = graphql`
