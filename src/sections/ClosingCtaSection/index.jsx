@@ -13,7 +13,7 @@ const ClosingCtaSection = (props) => {
   const { title, _rawContent, addButton, button } = data;
 
   return (
-    <Section data-theme="light" className={styles.section} sectionName="ClosingCtaSection" sectionSpacing="l">
+    <Section data-theme="light" className={styles.section} sectionName="ClosingCtaSection" sectionSpacing="xl">
       <img src={leafLeft} className={classNames(styles.leaf, styles.left)} />
       <div className={styles.textContainer}>
         {title && <h1 className={styles.title}>{title}</h1>}
