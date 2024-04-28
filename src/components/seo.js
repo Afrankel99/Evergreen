@@ -58,23 +58,16 @@ const Seo = (props) => {
   }, [darkMode]);
 
   return (
-    // <>
-    //   <title>Evergreen</title>
-    //   <meta name="description" content={metaDescription} />
-    //   <meta property="og:title" content={title} />
-    //   <meta property="og:description" content={metaDescription} />
-    //   <meta property="og:type" content="website" />
-    //   <link
-    //     rel="stylesheet"
-    //     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-    //   ></link>
-    //   {children}
-    // </>
     <>
-      <title>{title}</title>
+      <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <meta property="og:description" content={metaDescription} />
       <meta name="image" content={seo.ogImage} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={seo.ogImage} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:type" content="website" />
+
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
