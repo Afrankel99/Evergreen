@@ -22,6 +22,7 @@ export default {
     {
       name: `name`,
       title: `Name`,
+      description: 'The name of the product.',
       type: `string`,
       group: 'pageData',
       validation: (Rule) => Rule.required(),
@@ -36,6 +37,7 @@ export default {
     {
       name: `description`,
       title: `Description`,
+      description: 'Used on the product page.',
       type: `text`,
       group: 'pageData',
       validation: (Rule) => Rule.required(),
@@ -86,6 +88,7 @@ export default {
     {
       name: 'style',
       title: 'Style',
+      description: `The style of the product.`,
       type: 'array',
       of: [{ type: 'string' }],
       options: {
