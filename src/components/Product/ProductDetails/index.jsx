@@ -56,8 +56,8 @@ const ProductDetails = (props) => {
     {
       type: 'textarea',
       name: 'wish',
-      label: 'Additional comments*',
-      placeholder: `*Please let us know here if you have ordered multiple bouquets.`,
+      label: 'Additional comments',
+      placeholder: `*Please let us know here if you have ordered multiple bouquets. If you need delivery, please specify the receiver, contact number and the address.`,
       defaultValue: '',
     },
   ];

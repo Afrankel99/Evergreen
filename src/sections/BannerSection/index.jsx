@@ -15,6 +15,12 @@ const BannerSection = (props) => {
         <div className={styles.imageWrapper}>
           <Image imageData={image}></Image>
         </div>
+        <div className={styles.textContainer}>
+          <div data-theme="light" className={styles.text}>
+            {title && <h1 className={styles.title}>{title}</h1>}
+            {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
+          </div>
+        </div>
       </div>
     </Section>
   );

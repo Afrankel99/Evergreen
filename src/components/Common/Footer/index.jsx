@@ -23,12 +23,12 @@ const Footer = (props) => {
             <Image imageData={logo} className={styles.image} />
           </Link>
         </div>
-        <div className={styles.copyright}>{`© ${new Date().getFullYear()} Evergreen. All rights reserved.`}</div>
         <div className={styles.acknowledgement}>
           {`Evergreen acknowledges The Dharug People, the Traditional Owners of the land on
           which we work and create. We pay our respects to all Australian Indigenous
           peoples and their cultures, and to Elders of past, present and emerging generations.`}
         </div>
+        <div className={styles.copyright}>{`© ${new Date().getFullYear()} Evergreen. All rights reserved.`}</div>
       </div>
       <div className={styles.rightPane}>
         {footerLinks?.map((footerLink) => (
