@@ -93,9 +93,9 @@ const ProductDetails = (props) => {
             {price && <span className={styles.price}>{`$${price}`}</span>}
             {description && <p className={styles.body}>{description}</p>}
           </div>
-          <div className={styles.formContainer}>
+          {/* <div className={styles.formContainer}>
             <Form className={styles.form} fields={fields} name="Product Page Form" />
-          </div>
+          </div> */}
           <AccordionInfo />
         </div>
       </div>
