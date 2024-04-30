@@ -36,7 +36,7 @@
     font-weight: $font-weight-regular;
     border: none;
     background-color: transparent;
-    color: var(--midnight-500);
+    color: #AEAEAE;
 
     &:hover {
         color: var(--fruity-500);
@@ -44,7 +44,7 @@
     }
 
     &.active {
-        color: var(--fruity-500);
+        color: var(--midnight-500);
     }
 }
 
@@ -73,12 +73,6 @@
 
 .name {
     @include textLg;
-}
-
-.arrow {
-    path {
-        fill: var(--tangerine-500);
-    }
 }
 
 .carousel {
