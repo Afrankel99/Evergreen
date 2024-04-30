@@ -24,21 +24,24 @@
 }
 
 :global(.embla__button) {
-    border: 0;
+    border: none;
+    border-radius: 80px;
     display: block;
-    background-color: transparent;
+    background-color: var(--midnight-500);
+    width: 40px;
+    height: 40px;
 
     &:hover {
         cursor: pointer;
     }
 
-    svg {
-        fill: var(--midnight-500);
-        width: 40px;
-        height: 40px;
-
+    .arrow {
+        &.isPrev {
+            transform: rotate(180deg);
+        }
+    
         path {
-            fill: var(--melon-500);
+            fill: var(--base-white);
         }
     }
 
