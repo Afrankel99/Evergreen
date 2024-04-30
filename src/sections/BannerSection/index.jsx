@@ -16,7 +16,7 @@ const BannerSection = (props) => {
           <Image imageData={image}></Image>
         </div>
         <div className={styles.textContainer}>
-          <div data-theme="light" className={styles.text}>
+          <div data-theme="melon" className={styles.text}>
             {title && <h1 className={styles.title}>{title}</h1>}
             {addButton && <Button className={styles.button} title={button?.title} to={button.link} />}
           </div>
